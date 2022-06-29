@@ -1,6 +1,6 @@
 import React from 'react'
 import './LandingPageStyles.css'
-import backgroundVideo from '../../videos/waterfall.mp4'
+import backgroundVideo from '../../assets/videos/waterfall.mp4'
 
 
 const LandingPage = () => {
