@@ -19,6 +19,12 @@ const LandingPage = () => {
                     <body>Resilient Urban Systems and Habitats Initiative</body>
                 </div>
         </div>
+        <div className="carousel">
+            carousel
+        </div>
+        <div className="buttonBox">
+            button box
+        </div>
  
     </div>
   )
