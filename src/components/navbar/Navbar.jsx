@@ -20,7 +20,7 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
-            <div className="container">
+            <div className="containerYG">
                 <div className={slide ? 'logo slide-right' : 'logo'}>
                     <h3>RUSH</h3>
                 </div>
@@ -43,8 +43,8 @@ const Navbar = () => {
                 </ul>
 
                 <ul className='nav-menu hide'>
-                    <li><a href="/">Shop</a></li>
-                    <li><a href="/">Account</a></li>
+                    <li><a href="/">About Us</a></li>
+                    <li><a href="/">Contact</a></li>
                 </ul>
 
                 <div className="hamburger" onClick={handleNav} >

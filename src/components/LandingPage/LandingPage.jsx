@@ -12,14 +12,13 @@ const LandingPage = () => {
             </video>
         </div>
         <div className="container">
-                <div className="title">
-                    <h1>RUSH</h1>
-                </div>
-                <div className="contents">
-                    <body>Resilient Urban Systems and Habitats Initiative</body>
-                </div>
+            <div className="title">
+                <h1>RUSH</h1>
+            </div>
+            <div className="contents">
+                <body>Resilient Urban Systems and Habitats Initiative</body>
+            </div>    
         </div>
- 
     </div>
   )
 }
