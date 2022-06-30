@@ -5,7 +5,7 @@
     z-index: 5;
 }
 
-.navbar .container {
+.navbar .containerYG {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,7 +131,8 @@
 }
 
 /*placeholder css for navbar*/
-
+/*
 .navbar {
     background-color: black;
 }
+*/

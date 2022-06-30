@@ -1,6 +1,6 @@
 import React from 'react'
 import './LandingPageStyles.css'
-import backgroundVideo from '../../videos/waterfall.mp4'
+import backgroundVideo from '../../assets/videos/waterfall.mp4'
 
 
 const LandingPage = () => {
@@ -12,13 +12,14 @@ const LandingPage = () => {
             </video>
         </div>
         <div className="container">
-                <div className="title">
-                    <h1>RUSH</h1>
-                </div>
-                <div className="contents">
-                    <body>Resilient Urban Systems and Habitats Initiative</body>
-                </div>
+            <div className="title">
+                <h1>RUSH</h1>
+            </div>
+            <div className="contents">
+                <body>Resilient Urban Systems and Habitats Initiative</body>
+            </div>    
         </div>
+<<<<<<< HEAD
         <div className="carousel">
             carousel
         </div>
@@ -26,6 +27,8 @@ const LandingPage = () => {
             button box
         </div>
  
+=======
+>>>>>>> 22bd3788b3655d2f23cf3517167dcc00cb506741
     </div>
   )
 }

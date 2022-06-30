@@ -1,4 +1,5 @@
 /* styles for Landing Page */
+/*yassin change some code (added .landingPage before names of classes)*/
 
 .landingPage {
     background: #0c0c0c;
@@ -10,7 +11,7 @@
 
 }
 
-.videoBox {
+.landingPage .videoBox {
     position: absolute;
     top: 0;
     right: 0;
@@ -23,10 +24,8 @@
 
 }
 
-
-
-.container {
-    background-color: red;
+.landingPage .container {
+    background-color: aqua;
     z-index: 3;
     padding: 8px 24px;
     display: flex;
@@ -48,6 +47,12 @@
     z-index: 3;
 
 }
+
+.landingPage .top {
+    margin-top: 7rem;
+    color: #f6f6f6;
+}
+
 
 /* import styled from 'styled-components';
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
