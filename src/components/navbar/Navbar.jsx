@@ -22,16 +22,16 @@ const Navbar = () => {
         <div className='navbar'>
             <div className="containerYG">
                 <div className={slide ? 'logo slide-right' : 'logo'}>
-                    <h3>RUSH</h3>
+                    <h2>R U S H</h2>
                 </div>
 
                 {/*lots of code from old website to keep scrolling cpapbilities */}
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
                     <li><a href="/"><Link onClick={handleClose} activeClass="active" to="power" spy={true} smooth={true} duration={500}>Dashboards</Link></a></li>
                     <li><a href="/"><Link onClick={handleClose} activeClass="active" to="speed" spy={true} smooth={true} duration={500}>Events</Link></a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="power" spy={true} smooth={true} duration={500}>About</Link></a></li>
 
                     <div className='mobile-menu'>
-                        <button>About Us</button>
                         <button>Contact</button>
                         <div className="social-icons">
                             <FaFacebook className='icon' />
@@ -43,8 +43,7 @@ const Navbar = () => {
                 </ul>
 
                 <ul className='nav-menu hide'>
-                    <li><a href="/">About Us</a></li>
-                    <li><a href="/">Contact</a></li>
+                    <li><b href="/">Contact</b></li>
                 </ul>
 
                 <div className="hamburger" onClick={handleNav} >

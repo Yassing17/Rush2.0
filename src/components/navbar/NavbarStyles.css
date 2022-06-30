@@ -35,13 +35,21 @@
 }
 
 .nav-menu li {
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .nav-menu li a {
     color: #f6f6f6;
-    font-size: 1rem;
+    font-size: 1.75rem;
     font-weight: 600;
+    margin: 2rem;
+}
+
+.nav-menu li b {
+    color: #f6f6f6;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2rem;
 }
 
 @media screen and (max-width: 940px) {

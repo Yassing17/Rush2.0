@@ -26,7 +26,7 @@ a {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 7rem;
 }
 
 h2 {
@@ -35,6 +35,10 @@ h2 {
 
 h3 {
   font-size: 2rem;
+}
+
+p {
+  font-size: 1.5r;
 }
 
 .btn {
@@ -62,6 +66,22 @@ h3 {
   background: rgba(0, 0, 0, .8);
 }
 
+/*doesnt work */
+.tb1 {
+  margin: .5rem;
+  padding: .7rem 1.5rem;
+  font-size: .8rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  border: none;
+  width: 90%;
+  color: #f6f6f6;
+  cursor: pointer;
+}
+
+
+/*extras*/
 .placeholder1{
   background:rgba(0, 0, 0, .8);
 }

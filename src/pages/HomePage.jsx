@@ -4,6 +4,7 @@ import DashboardSection from '../components/DashboardSection/DashboardSection'
 import EventSection from '../components/EventSection/EventSection'
 import Navbar from '../components/Navbar/Navbar'
 import Contact from '../components/Contact/Contact'
+import LandingPage1 from '../components/LandingPage/LandingPage1'
 
 
 const Home = () => {
@@ -13,7 +14,8 @@ const Home = () => {
         <div>
           <Navbar/>
         </div>
-        <LandingPage></LandingPage>
+        <LandingPage1 />
+        {/*<LandingPage></LandingPage>*/}
         <DashboardSection></DashboardSection>
         <EventSection></EventSection>
         <Contact />
