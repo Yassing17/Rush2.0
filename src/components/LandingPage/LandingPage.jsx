@@ -1,6 +1,8 @@
 import React from 'react'
 import './LandingPageStyles.css'
 import backgroundVideo from '../../videos/waterfall.mp4'
+import { Carousel } from 'react-bootstrap'
+
 
 
 const LandingPage = () => {

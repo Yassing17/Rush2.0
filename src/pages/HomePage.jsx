@@ -7,7 +7,7 @@ import EventSection from '../components/EventSection/EventSection'
 const Home = () => {
   return (
     <div>
-        {/* <div>Heading Test</div> */}
+        
         <LandingPage></LandingPage>
         <DashboardSection></DashboardSection>
         <EventSection></EventSection>
