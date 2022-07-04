@@ -1,0 +1,45 @@
+.dashpage {
+    width: 100%;
+    height: 100vh;
+    background: #080072fc;
+}
+
+.dashpage .dpcontainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.dashpage .dpcontainer2 {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: #000000b3;
+    padding: 1.5rem;
+    color: #f6f6f6;
+}
+
+.dashpage .top {
+    justify-content: center;
+    margin-top: 7rem;
+    color: #ffffff;
+}
+
+.dashpage .bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 4rem;
+}
+
+@media screen and (max-width:540px) {
+    .dashpage .container .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
