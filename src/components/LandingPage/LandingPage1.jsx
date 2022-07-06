@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './LandingPageStyles1.css'
+import { Link } from 'react-scroll'
 
 const LandingPage1 = () => {
+    const [nav, setNav] = useState(false)
+    const [slide, setSlide] = useState(false)
+
+    const handleNav = () => {
+        setNav(!nav)
+        setSlide(!slide)
+    }
+
+    const handleClose = () => {
+        setNav(!nav)
+    }
+
     return (
         <div name='landingpage1' className='landingpage1'>
             <div className="container">
@@ -22,8 +35,8 @@ const LandingPage1 = () => {
                         </h3>
                     </div>    
                 <div className="bottom">
-                    <button className="btn btn-dark">Learn</button>
-                    <button className="btn btn-dark">Act</button>
+                    <Link onClick={handleClose} activeClass="active" to="dashpage" spy={true} smooth={true} duration={500}><button className="btn btn-dark">Learn</button></Link>
+                    <Link onClick={handleClose} activeClass="active" to="eventpage" spy={true} smooth={true} duration={500}><button className="btn btn-dark">Act</button></Link>
                 </div>
             </div>
         </div>

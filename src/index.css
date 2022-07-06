@@ -44,7 +44,7 @@ p {
 .btn {
   margin: .5rem;
   padding: .7rem 1.5rem;
-  font-size: .8rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 25px;
@@ -66,18 +66,25 @@ p {
   background: rgba(0, 0, 0, .8);
 }
 
-/*doesnt work */
+/*doesnt work (works) */
 .tb1 {
   margin: .5rem;
   padding: .7rem 1.5rem;
   font-size: .8rem;
   font-weight: 600;
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
-  border: none;
-  width: 90%;
-  color: #f6f6f6;
+  color: #000000;
   cursor: pointer;
+}
+
+.sectionheader {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  justify-content: center;
+
+  margin-top: 3rem;
 }
 
 

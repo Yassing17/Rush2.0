@@ -1,8 +1,17 @@
 import React from 'react'
+import './EventSectionStyles.css'
 
 const EventSection = () => {
   return (
-    <div>EventSection</div>
+    <div name='eventpage' className='eventpage'>
+      <div className="epcontainer">
+        <div className='top'>
+          <div className='epcontainer2'>
+            <h1>Events</h1>
+          </div>
+        </div>  
+      </div>
+  </div>
   )
 }
 

@@ -1,0 +1,45 @@
+.eventpage {
+    width: 100%;
+    height: 100vh;
+    background: #ba06f1fc;
+}
+
+.eventpage .epcontainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.eventpage .epcontainer2 {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: #000000b3;
+    padding: 1.5rem;
+    color: #f6f6f6;
+}
+
+.eventpage .top {
+    justify-content: center;
+    margin-top: 7rem;
+    color: #ffffff;
+}
+
+.eventpage .bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 4rem;
+}
+
+@media screen and (max-width:540px) {
+    .eventpage .container .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}

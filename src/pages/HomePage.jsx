@@ -18,7 +18,6 @@ const Home = () => {
         {/*<LandingPage></LandingPage>*/}
         <DashboardSection></DashboardSection>
         <EventSection></EventSection>
-        <Contact />
     </div>
   )
 }

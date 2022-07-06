@@ -3,6 +3,8 @@
     height: 100px;
     position: fixed;
     z-index: 5;
+    background-color: rgba(255, 255, 255, 0.526);
+    cursor: pointer;
 }
 
 .navbar .containerYG {
@@ -15,7 +17,7 @@
     display: flex;
     align-items: center;
     margin: 1rem;
-    color: #f6f6f6;
+    color: #000000;
     z-index: 5;
 
 
@@ -39,20 +41,20 @@
 }
 
 .nav-menu li a {
-    color: #f6f6f6;
+    color: #000000;
     font-size: 1.75rem;
     font-weight: 600;
     margin: 2rem;
 }
 
 .nav-menu li b {
-    color: #f6f6f6;
+    color: #000000;
     font-size: 1.25rem;
     font-weight: 600;
     margin: 2rem;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1300px) {
     .hamburger {
         display: block;
         z-index: 5;
@@ -89,7 +91,7 @@
     }
 
     .nav-menu li:hover {
-        border-bottom: 1px solid #aaa;
+        border-bottom: 1px solid rgb(19, 19, 19);
         width: 175px;
     }
 
@@ -101,7 +103,7 @@
         border: none;
         background: rgba(255, 255, 255, .3);
         width: 100%;
-        color: #f6f6f6;
+        color: #000000;
     }
 
     .nav-menu button:hover {
@@ -115,7 +117,7 @@
     }
 
     .nav-menu .icon {
-        color: #f8f8f8cc;
+        color: #000000;
         font-size: 1.4rem;
     }
 
