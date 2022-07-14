@@ -5,6 +5,8 @@ import EventSection from '../components/EventSection/EventSection'
 import Navbar from '../components/Navbar/Navbar'
 import Contact from '../components/Contact/Contact'
 import LandingPage1 from '../components/LandingPage/LandingPage1'
+import AboutPage from '../components/About/About'
+import Footer from '../components/Footer/Footer'
 
 
 const Home = () => {
@@ -18,6 +20,8 @@ const Home = () => {
         {/*<LandingPage></LandingPage>*/}
         <DashboardSection></DashboardSection>
         <EventSection></EventSection>
+        <AboutPage />
+        <Footer />
     </div>
   )
 }
