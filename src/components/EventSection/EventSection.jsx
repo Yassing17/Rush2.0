@@ -1,5 +1,8 @@
 import React from 'react'
 import './EventSectionStyles.css'
+import EventsMap from '../MapComponents/EventsMap/EventMap'
+
+
 
 const EventSection = () => {
   return (
@@ -8,6 +11,9 @@ const EventSection = () => {
         <h1>
           Events
         </h1>
+      </div>
+      <div>
+        <EventsMap ></EventsMap>
       </div>
   </div>
   )

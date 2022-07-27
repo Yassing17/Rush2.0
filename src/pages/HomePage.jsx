@@ -7,7 +7,7 @@ import Contact from '../components/Contact/Contact'
 import LandingPage1 from '../components/LandingPage/LandingPage1'
 import AboutPage from '../components/About/About'
 import Footer from '../components/Footer/Footer'
-import SensEcoMap from '../components/MapComponents/SensitiveEcosystems/SensEcoMap'
+import SensEcoMap from '../components/MapComponents/SensitiveEcosystemsMap/SensEcoMap'
 
 
 const Home = () => {
@@ -22,7 +22,6 @@ const Home = () => {
         <DashboardSection></DashboardSection>
         <EventSection></EventSection>
         <AboutPage />
-        <SensEcoMap />
         <Footer />
     </div>
   )

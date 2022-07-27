@@ -15,6 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 ul {
@@ -26,19 +27,23 @@ a {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 70px;
+}
+
+h15 {
+  font-size: 45px;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 1vmax;
+  font-size: 10px;
 }
 
 p {
-  font-size: 1.5r;
+  font-size:medium;
 }
 
 .btn {
@@ -50,7 +55,6 @@ p {
   border-radius: 25px;
   border: none;
   background: rgba(255, 255, 255, .1);
-  width: 90%;
   color: #f6f6f6;
   cursor: pointer;
 }
@@ -79,12 +83,9 @@ p {
 
 .sectionheader {
   width: 100%;
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  justify-content: center;
-
-  margin-top: 3rem;
+  color: rgb(0, 0, 0);
+  margin-left: 10rem;
+  margin-top: 5rem;
 }
 
 
@@ -92,3 +93,4 @@ p {
 .placeholder1{
   background:rgba(0, 0, 0, .8);
 }
+

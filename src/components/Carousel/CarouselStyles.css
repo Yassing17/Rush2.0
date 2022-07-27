@@ -3,11 +3,13 @@
 
 .Carousel {
   width: 100%;
-  margin: auto; 
+  margin: auto;
 }
 
 .slide img {
-  width: 85%;
+  display: flex;
+  flex-shrink:initial;
+  max-width: 50%;
   margin: 0 auto;
 }
 
@@ -50,9 +52,14 @@
 .CarouselSlideItem {
   outline: solid;
   border-radius: 25px;
-  background: blue;
+  background: rgba(255, 255, 255, 0.758);
   text-align: center;
-  padding: 40px;
-  height: 20%;
+  padding: 20px;
+  max-height: 20%;
   width: auto;
+}
+
+.title {
+  font-size: medium;
+
 }

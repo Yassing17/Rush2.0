@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet.zoomhome.css"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title>Marine Flora</title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet-svg-shape-markers.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+        <script src="js/leaflet.zoomhome.min.js"></script>
+
+        <script src="data/AgarumKelp_1.js"></script>
+        <script src="data/BullKelp_2.js"></script>
+        <script src="data/Eelgrass_3.js"></script>
+        <script src="data/FilamentousRedAlgae_4.js"></script>
+        <script src="data/FolioseGreenAlgae_5.js"></script>
+        <script src="data/FolioseRedAlgae_6.js"></script>
+        <script src="data/JapaneseWireweed_7.js"></script>
+        <script src="data/StalkedKelps_8.js"></script>
+        <script src="data/WidgeonGrass_9.js"></script>
+        <script src="data/EstuaryEcoUnits_10.js"></script>
+        <script>
+
+        /*================================================
+                        HIGHLIGHT FUNCTION
+        ================================================*/
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+                highlightLayer.setStyle({
+                    color: '#ffff00',
+                });
+            } else {
+                highlightLayer.setStyle({
+                    fillColor: '#ffff00',
+                    fillOpacity: 1
+                });
+            }
+        }
+    
+        /*================================================
+                        MAP INITIALIZATION
+        ================================================*/
+
+        var lat = 48.436143;
+        var lng = -123.403438;
+        var zoom = 13;
+
+        var map = L.map('map', {
+            zoomControl: false
+        }).setView([lat, lng], zoom);
+
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+
+        
+        /*================================================
+                        BASEMAPS
+        ================================================*/
+        map.createPane('pane_ESRIGraylight_0');
+        map.getPane('pane_ESRIGraylight_0').style.zIndex = 400;
+        var layer_ESRIGraylight_0 = L.tileLayer('http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+            pane: 'pane_ESRIGraylight_0',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 20
+        });
+        layer_ESRIGraylight_0;
+
+          //google satellite
+          googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+        map.addLayer(googleSat);
+
+        //google streets
+        var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+        //google Terrain
+        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+        /*==================================================================================================================
+                                                    AGARUM KELP
+        ===================================================================================================================*/
+        function pop_AgarumKelp_1(feature, layer) {
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Agarum Kelp</th>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_AgarumKelp_1_0() {
+            return {
+                pane: 'pane_AgarumKelp_1',
+                shape: 'square',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(78,150,123,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_AgarumKelp_1');
+        map.getPane('pane_AgarumKelp_1').style.zIndex = 401;
+        map.getPane('pane_AgarumKelp_1').style['mix-blend-mode'] = 'normal';
+        var layer_AgarumKelp_1 = new L.geoJson(json_AgarumKelp_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_AgarumKelp_1',
+            layerName: 'layer_AgarumKelp_1',
+            pane: 'pane_AgarumKelp_1',
+            onEachFeature: pop_AgarumKelp_1,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.shapeMarker(latlng, style_AgarumKelp_1_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_AgarumKelp_1);
+        map.addLayer(layer_AgarumKelp_1);
+
+        /*==================================================================================================================
+                                                    BULL KELP
+        ===================================================================================================================*/
+
+
+        function pop_BullKelp_2(feature, layer) {
+
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Bull Kelp</th>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_BullKelp_2_0() {
+            return {
+                pane: 'pane_BullKelp_2',
+                shape: 'square',
+                radius: 12.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(102,205,131,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_BullKelp_2');
+        map.getPane('pane_BullKelp_2').style.zIndex = 402;
+        map.getPane('pane_BullKelp_2').style['mix-blend-mode'] = 'normal';
+        var layer_BullKelp_2 = new L.geoJson(json_BullKelp_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_BullKelp_2',
+            layerName: 'layer_BullKelp_2',
+            pane: 'pane_BullKelp_2',
+            onEachFeature: pop_BullKelp_2,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.shapeMarker(latlng, style_BullKelp_2_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_BullKelp_2);
+        map.addLayer(layer_BullKelp_2);
+
+
+    /*==================================================================================================================
+                                            EELGRASS
+    ===================================================================================================================*/
+
+        function pop_Eelgrass_3(feature, layer) {
+
+
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+
+            const changeType = cur => {
+                let density = '';
+
+                if (cur == 'm-d') {
+                    density = 'Moderate - Dense';
+                } else if (cur == 's-l') {
+                    density = 'Sparse - Low';
+                } else {
+                    density = 'not surveyed';
+                }
+
+                return density;
+
+            };
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Eelgrass</th>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Density:</th>\
+                        <td colspan="2">' + (feature.properties['ZOS'] !== null ? changeType(autolinker.link(feature.properties['ZOS'].toLocaleString())) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_Eelgrass_3_0(feature) {
+            switch(String(feature.properties['ZOS'])) {
+                case 'm-d':
+                    return {
+                pane: 'pane_Eelgrass_3',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(155,186,69,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 's-l':
+                    return {
+                pane: 'pane_Eelgrass_3',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(233,255,190,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'no survey':
+                    return {
+                pane: 'pane_Eelgrass_3',
+                stroke: false,
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor:	'rgba(116, 159, 141, 1)',
+                interactive: true
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_Eelgrass_3');
+        map.getPane('pane_Eelgrass_3').style.zIndex = 403;
+        map.getPane('pane_Eelgrass_3').style['mix-blend-mode'] = 'normal';
+        var layer_Eelgrass_3 = new L.geoJson(json_Eelgrass_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Eelgrass_3',
+            layerName: 'layer_Eelgrass_3',
+            pane: 'pane_Eelgrass_3',
+            onEachFeature: pop_Eelgrass_3,
+            style: style_Eelgrass_3_0,
+        });
+        bounds_group.addLayer(layer_Eelgrass_3);
+        map.addLayer(layer_Eelgrass_3);
+
+        /*==================================================================================================================
+                                            FILAMENTOUS RED ALGAE
+        ===================================================================================================================*/
+        function pop_FilamentousRedAlgae_4(feature, layer) {
+
+
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Filamentous Red Algae</th>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_FilamentousRedAlgae_4_0() {
+            return {
+                pane: 'pane_FilamentousRedAlgae_4',
+                radius: 12.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(207,0,0,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_FilamentousRedAlgae_4');
+        map.getPane('pane_FilamentousRedAlgae_4').style.zIndex = 404;
+        map.getPane('pane_FilamentousRedAlgae_4').style['mix-blend-mode'] = 'normal';
+        var layer_FilamentousRedAlgae_4 = new L.geoJson(json_FilamentousRedAlgae_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_FilamentousRedAlgae_4',
+            layerName: 'layer_FilamentousRedAlgae_4',
+            pane: 'pane_FilamentousRedAlgae_4',
+            onEachFeature: pop_FilamentousRedAlgae_4,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_FilamentousRedAlgae_4_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_FilamentousRedAlgae_4);
+
+        /*==================================================================================================================
+                                            FOLIOSE GREEN ALGAE
+         ===================================================================================================================*/
+        function pop_FolioseGreenAlgae_5(feature, layer) {
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+            const changeTypeAlgae = cur => {
+                let density = '';
+
+                if (cur == 'm-d') {
+                    density = 'Moderate - Dense';
+                } else if (cur == 's-l') {
+                    density = 'Sparse - Low';
+                } else {
+                    density = 'not surveyed';
+                }
+
+                return density;
+
+            };
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Foliose Green Algae</th>\
+                    <tr>\
+                        <th scope="row">Density:</th>\
+                        <td colspan="2">' + (feature.properties['FOG'] !== null ? changeTypeAlgae(autolinker.link(feature.properties['FOG'].toLocaleString())) : '') + '</td>\
+                    </tr>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_FolioseGreenAlgae_5_0(feature) {
+            switch(String(feature.properties['FOG'])) {
+                case 'm-d':
+                    return {
+                pane: 'pane_FolioseGreenAlgae_5',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(199,215,207,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 's-l':
+                    return {
+                pane: 'pane_FolioseGreenAlgae_5',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(233,255,245,1.0)',
+                interactive: true,
+            }
+            case 'no survey':
+                    return {
+                pane: 'pane_FolioseGreenAlgae_5',
+                stroke: false,
+                fill: true,
+                fillOpacity: 0.9,
+                fillColor:	'rgba(163, 183, 216, 1)',
+                interactive: true
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_FolioseGreenAlgae_5');
+        map.getPane('pane_FolioseGreenAlgae_5').style.zIndex = 405;
+        map.getPane('pane_FolioseGreenAlgae_5').style['mix-blend-mode'] = 'normal';
+        var layer_FolioseGreenAlgae_5 = new L.geoJson(json_FolioseGreenAlgae_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_FolioseGreenAlgae_5',
+            layerName: 'layer_FolioseGreenAlgae_5',
+            pane: 'pane_FolioseGreenAlgae_5',
+            onEachFeature: pop_FolioseGreenAlgae_5,
+            style: style_FolioseGreenAlgae_5_0,
+        });
+        bounds_group.addLayer(layer_FolioseGreenAlgae_5);
+
+        /*==================================================================================================================
+                                            FOLIOSE RED ALGAE
+        ===================================================================================================================*/
+        function pop_FolioseRedAlgae_6(feature, layer) {
+
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Foliose Red Algae</th>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_FolioseRedAlgae_6_0() {
+            return {
+                pane: 'pane_FolioseRedAlgae_6',
+                radius: 12.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(115,0,0,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_FolioseRedAlgae_6');
+        map.getPane('pane_FolioseRedAlgae_6').style.zIndex = 406;
+        map.getPane('pane_FolioseRedAlgae_6').style['mix-blend-mode'] = 'normal';
+        var layer_FolioseRedAlgae_6 = new L.geoJson(json_FolioseRedAlgae_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_FolioseRedAlgae_6',
+            layerName: 'layer_FolioseRedAlgae_6',
+            pane: 'pane_FolioseRedAlgae_6',
+            onEachFeature: pop_FolioseRedAlgae_6,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_FolioseRedAlgae_6_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_FolioseRedAlgae_6);
+
+        /*==================================================================================================================
+                                            JAPANESE WIREWEED
+         ===================================================================================================================*/
+        function pop_JapaneseWireweed_7(feature, layer) {
+
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Japanese Wireweed</th>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_JapaneseWireweed_7_0() {
+            return {
+                pane: 'pane_JapaneseWireweed_7',
+                radius: 12.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(202,122,245,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_JapaneseWireweed_7');
+        map.getPane('pane_JapaneseWireweed_7').style.zIndex = 407;
+        map.getPane('pane_JapaneseWireweed_7').style['mix-blend-mode'] = 'normal';
+        var layer_JapaneseWireweed_7 = new L.geoJson(json_JapaneseWireweed_7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_JapaneseWireweed_7',
+            layerName: 'layer_JapaneseWireweed_7',
+            pane: 'pane_JapaneseWireweed_7',
+            onEachFeature: pop_JapaneseWireweed_7,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_JapaneseWireweed_7_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_JapaneseWireweed_7);
+
+
+        /*==================================================================================================================
+                                            STALKED KELPS
+        ===================================================================================================================*/
+        function pop_StalkedKelps_8(feature, layer) {
+
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Stalked Kelp</th>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_StalkedKelps_8_0() {
+            return {
+                pane: 'pane_StalkedKelps_8',
+                shape: 'square',
+                radius: 12.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,160,11,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_StalkedKelps_8');
+        map.getPane('pane_StalkedKelps_8').style.zIndex = 408;
+        map.getPane('pane_StalkedKelps_8').style['mix-blend-mode'] = 'normal';
+        var layer_StalkedKelps_8 = new L.geoJson(json_StalkedKelps_8, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_StalkedKelps_8',
+            layerName: 'layer_StalkedKelps_8',
+            pane: 'pane_StalkedKelps_8',
+            onEachFeature: pop_StalkedKelps_8,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.shapeMarker(latlng, style_StalkedKelps_8_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_StalkedKelps_8);
+
+        /*==================================================================================================================
+                                            WIDGEON GRASS
+         ===================================================================================================================*/
+        function pop_WidgeonGrass_9(feature, layer) {
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Widgeon Grass</th>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_WidgeonGrass_9_0() {
+            return {
+                pane: 'pane_WidgeonGrass_9',
+                radius: 12.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(122,245,202,1.0)',
+                interactive: true,
+            }
+        }
+        map.createPane('pane_WidgeonGrass_9');
+        map.getPane('pane_WidgeonGrass_9').style.zIndex = 409;
+        map.getPane('pane_WidgeonGrass_9').style['mix-blend-mode'] = 'normal';
+        var layer_WidgeonGrass_9 = new L.geoJson(json_WidgeonGrass_9, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_WidgeonGrass_9',
+            layerName: 'layer_WidgeonGrass_9',
+            pane: 'pane_WidgeonGrass_9',
+            onEachFeature: pop_WidgeonGrass_9,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_WidgeonGrass_9_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_WidgeonGrass_9);
+        map.addLayer(layer_WidgeonGrass_9);
+
+        /*==================================================================================================================
+                                            ESTUARY ECO UNITS
+         ===================================================================================================================*/
+        function pop_EstuaryEcoUnits_10(feature, layer) {
+            layer.on({
+                mouseout: function (e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+
+            const changeName = name => {
+                let ecosystemName = '';
+                name = name.substring(0, 3);
+                if (name == 'BEF') {
+                    ecosystemName = 'Beach Face';
+                } else if (name == 'BER') {
+                    ecosystemName = 'Beach Ridge';
+                } else if (name == 'CHA') {
+                    ecosystemName = 'Channel';
+                } else if (name == 'CLF') {
+                    ecosystemName = 'Cliff';
+                } else if (name == 'DUN') {
+                    ecosystemName = 'Dune';
+                } else if (name == 'MAR') {
+                    ecosystemName = 'Marsh';
+                } else if (name == 'MDW') {
+                    ecosystemName = 'Meadow';
+                } else if (name == 'OTC') {
+                    ecosystemName = 'Outcrop';
+                } else if (name == 'SHB') {
+                    ecosystemName = 'Shrub';
+                } else if (name == 'TFT') {
+                    ecosystemName = 'Tidal Flat';
+                } else if (name == 'TMA') {
+                    ecosystemName = 'Tidal Marsh';
+                } else if (name == 'TME') {
+                    ecosystemName = 'Tidal Meadow';
+                } else if (name == 'TOC') {
+                    ecosystemName = 'Tidal Outcrop';
+                } else if (name == 'TSW') {
+                    ecosystemName = 'Tidal Swamp';
+                } else if (name == 'TRE') {
+                    ecosystemName = 'Tree';
+                } else if (name == 'UNK') {
+                    ecosystemName = 'Unknown';
+                } else {
+                    ecosystemName = 'Unknown';
+                }
+
+                return ecosystemName;
+
+            };
+
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">Ecosystem:</th>\
+                        <td colspan="2">' + (feature.properties['EcosystemClass'] !== null ? changeName(autolinker.link(feature.properties['EcosystemClass'].toLocaleString())) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_EstuaryEcoUnits_10_0(feature) {
+            switch(String(feature.properties['EcosystemClass'])) {
+                case 'BEF':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(120,87,49,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'BER':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(149,119,58,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'CHA':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(166,222,206,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'CLF':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(195,195,195,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'DUN':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(128,128,128,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'MAR':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(145,184,175,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'MDW':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(57,207,24,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'OTC':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(179,217,160,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'SHB':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(193,213,111,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'TFT':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                stroke: false, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(76,198,212,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'TMA':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(32,131,202,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'TME':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(49,195,33,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'TOC':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(147,204,148,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'TSW':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(149,147,207,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'TRE':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(186,209,176,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'UNK':
+                    return {
+                pane: 'pane_EstuaryEcoUnits_10',
+                opacity: 0.5,
+                color: 'rgba(110,110,110,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 2.0, 
+                fill: true,
+                fillOpacity: 0.7,
+                fillColor: 'rgba(132,138,179,1.0)',
+                interactive: true,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_EstuaryEcoUnits_10');
+        map.getPane('pane_EstuaryEcoUnits_10').style.zIndex = 410;
+        map.getPane('pane_EstuaryEcoUnits_10').style['mix-blend-mode'] = 'normal';
+        var layer_EstuaryEcoUnits_10 = new L.geoJson(json_EstuaryEcoUnits_10, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_EstuaryEcoUnits_10',
+            layerName: 'layer_EstuaryEcoUnits_10',
+            pane: 'pane_EstuaryEcoUnits_10',
+            onEachFeature: pop_EstuaryEcoUnits_10,
+            style: style_EstuaryEcoUnits_10_0,
+        });
+        bounds_group.addLayer(layer_EstuaryEcoUnits_10);
+        map.addLayer(layer_EstuaryEcoUnits_10);
+
+
+        /*================================================
+                    TITLE
+        ================================================*/
+
+            var title = new L.Control();
+            title.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info');
+                this.update();
+                return this._div;
+            };
+            title.update = function () {
+                this._div.innerHTML = '<h2>Marine Flora</h2>';
+            };
+            title.addTo(map);
+
+        
+        /*================================================
+                        SEARCH BAR & ZOOM CONTROL
+        ================================================*/
+        var osmGeocoder = new L.Control.Geocoder({
+            collapsed: false,
+            position: 'topleft',
+            text: 'Search',
+            title: 'Testing'
+        }).addTo(map);
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .className += ' fa fa-search';
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .title += 'Search for a place';
+
+
+        var zoomHome = L.Control.zoomHome();
+        zoomHome.addTo(map);
+
+        /*================================================
+                        LEGEND
+        ================================================*/
+     
+        var baseMaps = {
+            "google satellite": googleSat,
+            "ESRI Gray (light)": layer_ESRIGraylight_0,
+            "google Streets": googleStreets,
+            // "google Terrain": googleTerrain,
+        };
+
+        var overlays = {
+        '<b>Eelgrass</b><br /><table><tr><td style="text-align: center;"><img src="legend/Eelgrass_3_ModerateDense0.png" /></td><td>Moderate - Dense</td></tr><tr><td style="text-align: center;"><img src="legend/Eelgrass_3_SparseLow1.png" /></td><td>Sparse - Low</td></tr><td style="text-align: center;"><img src="legend/EelDensUnk.png" width="15" height="15" /></td><td>Density Not Surveyed</td></tr></table>': layer_Eelgrass_3,
+        '<b>Foliose Green Algae</b><br /><table><tr><td style="text-align: center;"><img src="legend/FolioseGreenAlgae_5_ModerateDense0.png" /></td><td>Moderate - Dense</td></tr><tr><td style="text-align: center;"><img src="legend/FolioseGreenAlgae_5_SparseLow1.png" /></td><td>Sparse - Low</td></tr><td style="text-align: center;"><img src="legend/AlgaeDensUnk.png" width="15" height="15" /></td><td>Density Not Surveyed</td></tr></table>': layer_FolioseGreenAlgae_5,
+        '<img src="legend/WidgeonGrass_9.png" /> <b>Widgeon Grass</b> ': layer_WidgeonGrass_9,
+        '<img src="legend/StalkedKelps_8.png" /> <b>Stalked Kelps</b> ': layer_StalkedKelps_8,
+        '<img src="legend/JapaneseWireweed_7.png" /> <b>Japanese Wireweed</b>': layer_JapaneseWireweed_7,
+        '<img src="legend/FolioseRedAlgae_6.png" /> <b>Foliose Red Algae</b>': layer_FolioseRedAlgae_6,
+        '<img src="legend/BullKelp_2.png" /> <b>Bull Kelp</b> ': layer_BullKelp_2,
+        '<img src="legend/AgarumKelp_1.png" /> <b>Agarum Kelp</b> ': layer_AgarumKelp_1,
+        '<img src="legend/FilamentousRedAlgae_4.png" /> <b>Filamentous Red Algae</b> ': layer_FilamentousRedAlgae_4,
+        '<b>Estuary Ecosystem</b> <br /><table><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Beachface0.png" /></td><td>Beach face</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Beachridge1.png" /></td><td>Beach ridge</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Channel2.png" /></td><td>Channel</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Cliff3.png" /></td><td>Cliff</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Dune4.png" /></td><td>Dune</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Marsh5.png" /></td><td>Marsh</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Meadow6.png" /></td><td>Meadow</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Outcrop7.png" /></td><td>Outcrop</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Shrub8.png" /></td><td>Shrub</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Tidalflat9.png" /></td><td>Tidal flat</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Tidalmarsh10.png" /></td><td>Tidal marsh</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Tidalmeadow11.png" /></td><td>Tidal meadow</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Tidaloutcrop12.png" /></td><td>Tidal outcrop</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Tidalswamp13.png" /></td><td>Tidal swamp</td></tr><tr><td style="text-align: center;"><img src="legend/EstuaryEcoUnits_10_Tree14.png" /></td><td>Tree</td></tr></table>': layer_EstuaryEcoUnits_10,
+        }
+
+        var layerControl = L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
+        layerControl.addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+
+.mapContainer {
+    display: flex;
+    -ms-flex-align: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 25px;
+    border-color: black; 
+    border-style: solid;
+    border-width: 10px;
+    z-index: 1;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width:min-content;
+}
+
+.mapObj {
+    justify-content: center;
+    justify-items: center;
+    z-index: 1;
+}
+
+.mapDescription {
+    display: flex;
+    border-radius: 25px;
+    border-color: black; 
+    border-style: solid;
+    border-width: 10px;
+}

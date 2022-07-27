@@ -23,7 +23,7 @@ const LandingPage1 = () => {
                     <h1>RUSH</h1>
                 </div>
                 <div className='container2'>
-                    <h3>
+                    <p>
                         The RUSH project within the Inspire program aims to support the RUSH initiative.
                         The RUSH initiative seeks to foster ecological healing through community engagement
                         by centralizing information on an interactive landing page that reports regional 
@@ -33,7 +33,7 @@ const LandingPage1 = () => {
                         Further, by leveraging geographic information systems (GIS), the data can be made 
                         comprehensible and accessible to all community members. In the long term, the RUSH platform 
                         can become a tool for the region to develop community autonomy, awareness, and agency.
-                    </h3>
+                    </p>
                 </div> 
                 <div className='container3'>
                     <Carousel />

@@ -8,33 +8,33 @@ import education from "../../assets/pictures/education.png";
 import taken from "../../assets/pictures/taken.png";
 import land from "../../assets/pictures/land.jpg"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import sun from "../../assets/pictures/sunclip2.png"
+import veggies from "../../assets/pictures/veggiesclip.png"
+import treehouse from "../../assets/pictures/treehouseclip.png"
 
 
 const items = [
   {
       card: {
-          title: 'title one',
-          desc: 'description one',
-          image: astronaut,
+          title: 'How to beat the heat?',
+          image: sun,
       },
   },
   {
       card: {
-          title: "title two",
-          desc: "description two",
-          image: celebrating,
+          title: "How can I eat local?",
+          image: veggies,
      },
   },
   {
       card: {
-          title: 'title three',
-          desc: 'description three',
-          image: education,
+          title: 'Is a development here a good idea?',
+          image: treehouse,
       },
   },
   {
       card: {
-          title: 'title four',
+          title: 'My Nature Fix ',
           desc: 'description four',
           image: taken,
       },
@@ -49,7 +49,7 @@ function Carousel() {
         <FaArrowRight />
       </div>
     );
-  };
+  };  
 
   const PrevArrow = ({ onClick }) => {
     return (
@@ -79,7 +79,7 @@ function Carousel() {
         {items.map((item,idx) => (
           <div className={idx === itemIndex ? "slide activeSlide" : "slide"}>
             <div className='CarouselSlideItem'>
-              <h1>{item.card.title}</h1>
+              <h15>{item.card.title}</h15>
               <p>{item.card.desc}</p>
               <img src={item.card.image} alt={item.card.title} />
             </div>
