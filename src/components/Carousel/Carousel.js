@@ -2,11 +2,6 @@
 import "./CarouselStyles.css";
 import { useState } from "react";
 import Slider from "react-slick";
-import astronaut from "../../assets/pictures/astronaut.png";
-import celebrating from "../../assets/pictures/celebrating.png";
-import education from "../../assets/pictures/education.png";
-import taken from "../../assets/pictures/taken.png";
-import land from "../../assets/pictures/land.jpg"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import sun from "../../assets/pictures/sunclip2.png"
 import veggies from "../../assets/pictures/veggiesclip.png"
@@ -34,9 +29,8 @@ const items = [
   },
   {
       card: {
-          title: 'My Nature Fix ',
-          desc: 'description four',
-          image: taken,
+          title: 'How do I protect our coasts? ',
+          image: treehouse,
       },
   },
 ];

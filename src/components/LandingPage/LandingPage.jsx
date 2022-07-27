@@ -1,15 +1,12 @@
 import React from 'react'
 import './LandingPageStyles.css'
-import backgroundVideo from '../../assets/videos/waterfall.mp4'
 
 
 const LandingPage = () => {
   return (
     <div name='landingPage' className='landingPage'>
         <div className='videoBox'>
-            <video autoPlay muted loop id="backgroundVideo">
-                <source src={backgroundVideo} type="video/mp4"></source>
-            </video>
+
         </div>
         <div className="container">
             <div className="title">
