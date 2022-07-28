@@ -18,7 +18,7 @@ const DashboardSection = () => {
     <Container fluid>
         <Row>
           <Col>
-            <h1 style={{margin: "50px"}}>Dashboards</h1>
+            <h1 style={{margin: "50px"}} id='dashpage'>Dashboards</h1>
           </Col>
           <Col>
             <h1>Button goes here</h1>
