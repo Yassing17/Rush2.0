@@ -9,6 +9,8 @@ import { Link } from 'react-scroll'
 
 
 
+
+
 const items = [
   {
       card: {
@@ -80,7 +82,7 @@ function Carousel() {
                   <img src={item.card.image} alt={item.card.title} />
                 </Link> 
             </div>
-          </div>
+            </div>
         ))}
 
       </Slider>
@@ -90,4 +92,3 @@ function Carousel() {
 
 export default Carousel;
 
-{/**/}
