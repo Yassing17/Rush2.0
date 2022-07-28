@@ -11,6 +11,7 @@
     overflow: auto;
     outline-style: solid;
     background: white;
+    overflow: auto;
   }
    .storyContainer{
     height: 200px;

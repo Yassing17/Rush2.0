@@ -8,7 +8,8 @@ import MarineFaunaMap from '../MapComponents/MarineFaunaMap/MarineFaunaMap'
 import SensEcoDisc from '../MapComponents/SensitiveEcosystemsMap/SensEcoDisc'
 import SensEcoMap from '../MapComponents/SensitiveEcosystemsMap/SensEcoMap'
 import ContentPage from '../Content/contentPage'
-import { SEcontent } from '../Content/content'
+import { SEcontent, BHcontent, MFAcontent, MFLcontent, FScontent } from '../Content/content'
+import MarineFloraMap from '../MapComponents/MarineFloraMap/MarineFloraMap'
 
 
 
@@ -21,10 +22,11 @@ const DashboardSection = () => {
             <h1 style={{margin: "50px"}}>Dashboards</h1>
           </Col>
           <Col>
-            <h1>Button goes here</h1>
+            {/* <h1>Button goes here</h1> */}
           </Col>
         </Row>
         
+        {/* sensitive ecosystem map and content */}
         <Row>
           <Col>
               <SensEcoMap />
@@ -35,21 +37,59 @@ const DashboardSection = () => {
             </div>
           </Col>
         </Row>
+
+
+        <Row>
+          <Col>
+              <BeatTheHeat />
+          </Col>
+          <Col>
+            <div className='mapDisc'>
+              <ContentPage {...BHcontent}/>
+            </div>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+              <MarineFaunaMap />
+          </Col>
+          <Col>
+            <div className='mapDisc'>
+              <ContentPage {...MFAcontent}/>
+            </div>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+              <MarineFloraMap />
+          </Col>
+          <Col>
+            <div className='mapDisc'>
+              <ContentPage {...MFLcontent}/>
+            </div>
+          </Col>
+        </Row>
       
-        <SensEcoMap />
+        <Row>
+          <Col>
+              <FoodSecMap />
+          </Col>
+          <Col>
+            <div className='mapDisc'>
+              <ContentPage {...FScontent}/>
+            </div>
+          </Col>
+        </Row>
+      
+      
+      
+      
+      
  
-      <div className='mapDisc'>
-        <SensEcoDisc />
-      </div>
-      <div className='mapElement'>
-        <FoodSecMap />
-      </div>
-      <div className='mapElement'>
-        <MarineFaunaMap />
-      </div>
-      <div className='mapElement'>
-        <BeatTheHeat />
-      </div>
+     
+
     </Container>
   )
 }
