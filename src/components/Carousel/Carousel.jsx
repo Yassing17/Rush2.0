@@ -1,11 +1,12 @@
-
+import React, { useState } from 'react'
 import "./CarouselStyles.css";
-import { useState } from "react";
 import Slider from "react-slick";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import sun from "../../assets/pictures/sunclip2.png"
 import veggies from "../../assets/pictures/veggiesclip.png"
 import treehouse from "../../assets/pictures/treehouseclip.png"
+import { Link } from 'react-scroll'
+
 
 
 const items = [
@@ -73,9 +74,11 @@ function Carousel() {
         {items.map((item,idx) => (
           <div className={idx === itemIndex ? "slide activeSlide" : "slide"}>
             <div className='CarouselSlideItem'>
-              <h15>{item.card.title}</h15>
-              <p>{item.card.desc}</p>
-              <img src={item.card.image} alt={item.card.title} />
+              <Link to={item.card.title}>
+                  <h15>{item.card.title}</h15>
+                  <p>{item.card.desc}</p>
+                  <img src={item.card.image} alt={item.card.title} />
+                </Link> 
             </div>
           </div>
         ))}

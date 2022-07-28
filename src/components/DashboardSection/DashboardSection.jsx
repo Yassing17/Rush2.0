@@ -7,6 +7,8 @@ import FoodSecMap from '../MapComponents/FoodSecurityMap/FoodSecMap'
 import MarineFaunaMap from '../MapComponents/MarineFaunaMap/MarineFaunaMap'
 import SensEcoDisc from '../MapComponents/SensitiveEcosystemsMap/SensEcoDisc'
 import SensEcoMap from '../MapComponents/SensitiveEcosystemsMap/SensEcoMap'
+import ContentPage from '../Content/contentPage'
+import { SEcontent } from '../Content/content'
 
 
 
@@ -16,7 +18,7 @@ const DashboardSection = () => {
     <Container fluid>
         <Row>
           <Col>
-            <h1>Dashboards</h1>
+            <h1 style={{margin: "50px"}}>Dashboards</h1>
           </Col>
           <Col>
             <h1>Button goes here</h1>
@@ -29,7 +31,7 @@ const DashboardSection = () => {
           </Col>
           <Col>
             <div className='mapDisc'>
-              <SensEcoDisc />
+              <ContentPage {...SEcontent}/>
             </div>
           </Col>
         </Row>

@@ -1,0 +1,48 @@
+.contentContainer{
+    text-align: center;
+    height: 700px;
+    width:700px;
+    background-color: #30795c;
+  
+  }
+   .accordionContainer{
+    height: 200px;
+    width: 700px;
+    overflow: auto;
+    outline-style: solid;
+    background: white;
+  }
+   .storyContainer{
+    height: 200px;
+    width: 700px;
+   
+    outline-style: solid;
+    background: white;
+    overflow: auto;
+  
+  
+  }
+  
+  .storyText{
+  
+    overflow: auto;
+    text-align: left;
+    margin-left: 1cm;
+    margin-right: 1cm;
+  }
+   .tipsContainer {
+    height: 100px;
+    width: 700px;
+   
+    outline-style: solid;
+    background: white;
+    overflow: auto;
+  }
+  
+  .tipsText{
+  
+    text-align: left;
+    margin-left: 1cm;
+    margin-right: 1cm;
+  }
+ 

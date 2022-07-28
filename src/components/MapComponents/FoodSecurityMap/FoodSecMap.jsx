@@ -5,7 +5,7 @@ import '../MapObject.css'
 
 function FoodSecMap() {
   return (
-  <div className='mapElement'>  
+  <div className='mapElement' id="How can I eat local?">  
     <div className='mapContainer'>
       <div className='mapObj'>
 

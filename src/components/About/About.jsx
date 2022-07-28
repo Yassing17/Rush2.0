@@ -9,7 +9,7 @@ const AboutPage = () => {
           About
         </h1>
       </div>
-  </div>
+    </div>
   )
 }
 
