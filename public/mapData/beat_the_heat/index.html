@@ -315,7 +315,6 @@
             });
             var popupContent = '<table>\
                 <tr>\
-                    <th scope="row">Drinking Fountain</th>\
                     <th scope="row">Location:</th>\
                     <td colspan="2">' + (feature.properties['LocationName'] !== null ? autolinker.link(feature.properties['LocationName'].toLocaleString()) : '') + '</td>\
                 </tr>\
@@ -344,6 +343,7 @@
 
         var drinking_fountain_icon = L.icon({
             iconUrl: 'legend/VictoriaDrinkingFountains_4.png',
+            iconSize: [20,20]
 
         });
 
@@ -385,7 +385,7 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Heat Dome</th>\
+                        <th scope="row">Heat Island</th>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, { maxHeight: 400 });
@@ -544,8 +544,8 @@
                         LEGEND
         ================================================*/
         var overlays = {
-            '<img src="legend/HeatDomes_5.png" /> Heat Domes': layer_HeatDomes_5,
-            '<img src="legend/VictoriaDrinkingFountains_4.png" /> Victoria Drinking Fountains': layer_VictoriaDrinkingFountains_4,
+            '<img src="legend/HeatDomes_5.png" /> Heat Islands': layer_HeatDomes_5,
+            '<img src="legend/VictoriaDrinkingFountains_4.png"  /> Victoria Drinking Fountains': layer_VictoriaDrinkingFountains_4,
             '<img src="legend/Park_2_Park2.png" /> Parks': layer_Park_2,
             '<img src="legend/FirstNationReserve_1.png" /> First Nation Reserve': layer_FirstNationReserve_1,
             'Air Conditioned Buildings<br /><table><tr><td style="text-align: center;"><img src="legend/publiclibrary.png" /></td><td>Libraries</td></tr><tr><td style="text-align: center;"><img src="legend/communitycenter.png" /></td><td>Community Centres</td></tr></table>': layer_AirConditionedBuildings_2
@@ -555,7 +555,6 @@
             "google satellite": googleSat,
             "ESRI Gray (light)": layer_ESRIGraylight_0,
             "google Streets": googleStreets,
-            // "google Terrain": googleTerrain,
         };
 
         var layerControl = L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);

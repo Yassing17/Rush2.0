@@ -17,9 +17,13 @@
 
     <!-- map styling -->
     <style>
+        html,
+        body,
         #map {
             width: 100%;
-            height: 100vh;
+            height: 100%;
+            padding: 0;
+            margin: 0;
         }
     </style>
     <title>Sensitive Ecosystems</title>
@@ -121,11 +125,7 @@
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
 
-        //google Terrain
-        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
+      
 
 
         /*==================================================================================================================
@@ -574,6 +574,8 @@
         };
         title.addTo(map);
 
+
+
         /*================================================
                         SEARCH BAR & ZOOM CONTROL
         ================================================*/
@@ -596,15 +598,15 @@
                         LEGEND
         ================================================*/
         var overlays = {
-            '<img src="legend/GarryOak1997_2.png" /> Garry Oak 1997': layer_GarryOak1997_2,
-            'Sensitive Ecosystems<br /><table><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_CoastalBluffs0.png" /></td><td>Coastal Bluffs</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Estuarine1.png" /></td><td>Estuarine</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Intertidal2.png" /></td><td>Intertidal</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Herbaceous3.png" /></td><td>Herbaceous</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_MatureForest4.png" /></td><td>Mature Forest</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Cliff5.png" /></td><td>Cliff</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_FringeForest8.png" /></td><td>Fringe Forest</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_TerrestrialHerbaceous9.png" /></td><td>Terrestrial Herbaceous</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_OlderForest10.png" /></td><td>Older Forest</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Riparian11.png" /></td><td>Riparian</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_SparselyVegetated12.png" /></td><td>Sparsely Vegetated</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Wetland13.png" /></td><td>Wetland</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Woodland14.png" /></td><td>Woodland</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_SeasonallyFloodedAgricultural15.png" /></td><td>Seasonally Flooded Agricultural</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_OlderSecondGrowth16.png" /></td><td>Older Second Growth</td></tr></table>': layer_SensitiveEcosystems_1,
+            '<img src="legend/GarryOak1997_2.png" /> <b>Garry Oak Ecosystems</b>': layer_GarryOak1997_2,
+            '<b>Sensitive Ecosystems</b><br /><table><td style="text-align: centre;"><img src="legend/SensitiveEcosystems_1_CoastalBluffs0.png" /></td><td>Coastal Bluffs</td></tr><tr><td style="text-align: centre;"><img src="legend/SensitiveEcosystems_1_Estuarine1.png" /></td><td>Estuarine</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Intertidal2.png" /></td><td>Intertidal</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Herbaceous3.png" /></td><td>Herbaceous</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_MatureForest4.png" /></td><td>Mature Forest</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Cliff5.png" /></td><td>Cliff</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_FringeForest8.png" /></td><td>Fringe Forest</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_TerrestrialHerbaceous9.png" /></td><td>Terrestrial Herbaceous</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_OlderForest10.png" /></td><td>Older Forest</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Riparian11.png" /></td><td>Riparian</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_SparselyVegetated12.png" /></td><td>Sparsely Vegetated</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Wetland13.png" /></td><td>Wetland</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_Woodland14.png" /></td><td>Woodland</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_SeasonallyFloodedAgricultural15.png" /></td><td>Seasonally Flooded Agricultural</td></tr><tr><td style="text-align: center;"><img src="legend/SensitiveEcosystems_1_OlderSecondGrowth16.png" /></td><td>Older Second Growth</td></tr></table>': layer_SensitiveEcosystems_1,
         };
 
         var baseMaps = {
             "google satellite": googleSat,
             "ESRI Gray (light)": layer_ESRIGraylight_0,
-            "google Streets": googleStreets,
-            // "google Terrain": googleTerrain,
+            "google Streets": googleStreets
+     
         };
 
 
@@ -613,5 +615,4 @@
         setBounds();
     </script>
 </body>
-
 </html>

@@ -121,12 +121,7 @@
             subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
         });
 
-        //google Terrain
-        var googleTerrain = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
-            maxZoom: 20,
-            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-        });
-
+     
         /*==================================================================================================================
                                                     MIGRATORY BIRD SANCTUARY
         ===================================================================================================================*/
@@ -153,7 +148,6 @@
             });
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Name:</th>\
                         <td colspan="2">' + (feature.properties['NAME'] !== null ? autolinker.link(feature.properties['NAME'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
@@ -771,7 +765,6 @@
             "google satellite": googleSat,
             "ESRI Gray (light)": layer_ESRIGraylight_0,
             "google Streets": googleStreets,
-            // "google Terrain": googleTerrain,
         };
         
         var overlays = {
