@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import "./CarouselStyles.css";
 import Slider from "react-slick";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 import sun from "../../assets/pictures/sunclip2.png"
 import veggies from "../../assets/pictures/veggiesclip.png"
 import treehouse from "../../assets/pictures/treehouseclip.png"
 import { Link } from 'react-scroll'
+
 
 
 
@@ -33,9 +34,21 @@ const items = [
   },
   {
       card: {
-          title: 'How do I protect our coasts? ',
+          title: 'How can I protect our coasts? ',
           image: treehouse,
       },
+  },
+  {
+    card: {
+      title: 'What Ecosystems are around me',
+      image: treehouse,
+    },
+  },
+  {
+    card: {
+      title: 'Who do I share my home with? ',
+      image: treehouse,
+    },
   },
 ];
 
@@ -44,7 +57,7 @@ function Carousel() {
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
-        <FaArrowRight />
+        <TiChevronRight size={35} />
       </div>
     );
   };  
@@ -52,7 +65,7 @@ function Carousel() {
   const PrevArrow = ({ onClick }) => {
     return (
       <div className="arrow prev" onClick={onClick}>
-        <FaArrowLeft />
+        <TiChevronLeft size={35} />
       </div>
     );
   };
@@ -62,8 +75,8 @@ function Carousel() {
   const settings = {
     infinite: true,
     lazyLoad: true,
-    speed: 300,
-    slidesToShow: 3,
+    speed: 200,
+    slidesToShow: 5,
     centerMode: true,
     centerPadding: 0,
     nextArrow: <NextArrow />,
@@ -72,22 +85,30 @@ function Carousel() {
   };
 
   return (
-    <div className="Carousel">
-      <Slider {...settings}>
-        {items.map((item,idx) => (
-          <div className={idx === itemIndex ? "slide activeSlide" : "slide"}>
-            <div className='CarouselSlideItem'>
-              <Link to={item.card.title}>
-                  <h15>{item.card.title}</h15>
-                  <p>{item.card.desc}</p>
-                  <img src={item.card.image} alt={item.card.title} />
-                </Link> 
-            </div>
-            </div>
-        ))}
+    <>
+    <div name='carouselAnchor' className='carouselAnchor'></div>
+    <div className='carouselTitle'>
+      <h1>Explore the RUSH maps collection</h1>
+      <h15>click on one of the prompts below</h15>
+    </div><div className="Carousel">
 
-      </Slider>
-    </div>
+        <Slider {...settings}>
+          {items.map((item, idx) => (
+            <div className={idx === itemIndex ? "slide activeSlide" : "slide"}>
+              <div className='CarouselSlideItem'>
+                <Link to={item.card.title}>
+                  <h15>{item.card.title}</h15>
+                  {/* <img src={item.card.image} alt={item.card.title} /> */}
+                </Link>
+              </div>
+            </div>
+          ))}
+
+        </Slider>
+
+      </div></>
+    
+
   );
 }
 

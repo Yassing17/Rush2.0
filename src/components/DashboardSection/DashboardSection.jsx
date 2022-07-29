@@ -15,6 +15,8 @@ import MarineFloraMap from '../MapComponents/MarineFloraMap/MarineFloraMap'
 
 const DashboardSection = () => {
   return (
+
+    <div name='dashpage' className='dashpage'>
    
     <Container fluid>
         <Row>
@@ -83,14 +85,10 @@ const DashboardSection = () => {
           </Col>
         </Row>
       
-      
-      
-      
-      
- 
-     
-
+  
     </Container>
+
+    </div>
   )
 }
 
