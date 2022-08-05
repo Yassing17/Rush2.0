@@ -119,3 +119,23 @@ export const FScontent = {
     ]
     
  };
+
+//Coastal Sensitivity Content
+export const CScontent = {
+    title: 'Coastal Sensitivity',
+    story: [
+        
+
+    ],
+
+    tips: [
+
+    ],
+  
+    terms: [
+        {number: 0, name: 'Coastal Bluff', definition: ''},
+        {number: 1, name: 'Estuarine', definition: ''},
+        {number: 2, name: 'Intertidal', definition: ''},
+    ]
+    
+ };

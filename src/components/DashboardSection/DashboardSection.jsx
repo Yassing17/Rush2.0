@@ -5,11 +5,12 @@ import Col from 'react-bootstrap/Col'
 import BeatTheHeat from '../MapComponents/BeatTheHeatMap/BeatHeatMap'
 import FoodSecMap from '../MapComponents/FoodSecurityMap/FoodSecMap'
 import MarineFaunaMap from '../MapComponents/MarineFaunaMap/MarineFaunaMap'
-import SensEcoDisc from '../MapComponents/SensitiveEcosystemsMap/SensEcoDisc'
 import SensEcoMap from '../MapComponents/SensitiveEcosystemsMap/SensEcoMap'
 import ContentPage from '../Content/contentPage'
-import { SEcontent, BHcontent, MFAcontent, MFLcontent, FScontent } from '../Content/content'
+import { SEcontent, BHcontent, MFAcontent, MFLcontent, FScontent, CScontent } from '../Content/content'
 import MarineFloraMap from '../MapComponents/MarineFloraMap/MarineFloraMap'
+import CoastalSensMap from '../MapComponents/CoastalSensMap/CoastalSensMap'
+
 import "./DashboardSectionStyles.css";
 
 
@@ -26,15 +27,7 @@ const DashboardSection = () => {
       <div name='dashpage' className='dashpage'>
 
         <Container fluid>
-          {/* <Row>
-            <Col>
-              <h1 style={{ margin: "50px" }}>Dashboards</h1>
-            </Col>
-            <Col>
-            </Col>
-          </Row> */}
-
-          {/* sensitive ecosystem map and content */}
+  
           <Row>
             <Col>
               <SensEcoMap />
@@ -54,6 +47,17 @@ const DashboardSection = () => {
             <Col>
               <div className='mapDisc'>
                 <ContentPage {...BHcontent} />
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <CoastalSensMap />
+            </Col>
+            <Col>
+              <div className='mapDisc'>
+                <ContentPage {...CScontent} />
               </div>
             </Col>
           </Row>

@@ -28,13 +28,13 @@ const items = [
   },
   {
       card: {
-          title: 'Is a development here a good idea?',
+          title: 'Is development here a good idea?',
           image: treehouse,
       },
   },
   {
       card: {
-          title: 'How can I protect our coasts? ',
+          title: 'How can I protect our coasts?',
           image: treehouse,
       },
   },
@@ -46,7 +46,7 @@ const items = [
   },
   {
     card: {
-      title: 'Who do I share my home with? ',
+      title: 'Who do I share my home with?',
       image: treehouse,
     },
   },
@@ -98,7 +98,7 @@ function Carousel() {
               <div className='CarouselSlideItem'>
                 <Link to={item.card.title}>
                   <h15>{item.card.title}</h15>
-                  {/* <img src={item.card.image} alt={item.card.title} /> */}
+                  <img src={item.card.image} alt={item.card.title} />
                 </Link>
               </div>
             </div>

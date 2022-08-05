@@ -209,7 +209,7 @@
             style: style_FirstNationReserve_1_0,
         });
         bounds_group.addLayer(layer_FirstNationReserve_1);
-        map.addLayer(layer_FirstNationReserve_1);
+        // map.addLayer(layer_FirstNationReserve_1);
 
 
         /*==================================================================================================================
@@ -553,7 +553,7 @@
             '<img src="legend/HeatDomes_5.png" /> Heat Islands': layer_HeatDomes_5,
             '<img src="legend/VictoriaDrinkingFountains_4.png"  /> Victoria Drinking Fountains': layer_VictoriaDrinkingFountains_4,
             '<img src="legend/Park_2_Park2.png" /> Parks': layer_Park_2,
-            '<img src="legend/FirstNationReserve_1.png" /> First Nation Reserve': layer_FirstNationReserve_1,
+            // '<img src="legend/FirstNationReserve_1.png" /> First Nation Reserve': layer_FirstNationReserve_1,
             'Air Conditioned Buildings<br /><table><tr><td style="text-align: center;"><img src="legend/publiclibrary.png" /></td><td>Libraries</td></tr><tr><td style="text-align: center;"><img src="legend/communitycenter.png" /></td><td>Community Centres</td></tr></table>': layer_AirConditionedBuildings_2
         }
 
@@ -563,7 +563,7 @@
             "google Streets": googleStreets,
         };
 
-        var layerControl = L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
+        var layerControl = L.control.layers(baseMaps, overlays, { collapsed: false }).addTo(map);
         layerControl.addTo(map);
         setBounds();
     </script>

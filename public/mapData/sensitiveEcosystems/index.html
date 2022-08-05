@@ -615,7 +615,7 @@
         };
 
 
-        var layerControl = L.control.layers(baseMaps, overlays, { collapsed: true }).addTo(map);
+        var layerControl = L.control.layers(baseMaps, overlays, { collapsed: false }).addTo(map);
         layerControl.addTo(map);
         setBounds();
     </script>

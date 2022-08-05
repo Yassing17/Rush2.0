@@ -5,7 +5,7 @@ import '../MapObject.css'
 
 function MarineFaunaMap() {
   return (
-  <div className='mapElement'>  
+  <div className='mapElement' id='Who do I share my home with?'>  
     <div className='mapContainer'>
       <div className='mapObj'>
 
