@@ -1,18 +1,71 @@
 .landingpage1 {
     display: flex;
     width: 100%;
-    height: 120vh;
-    /* background-attachment: fixed; */
+    height: 100vh;
+ 
     background: url('../../assets/pictures/slideshow/heron.jpg') no-repeat center top/cover;
+    animation: slideshow 100s infinite 0s;
+    animation-timing-function: step-start;
+
 }
 
-/* .landingpage1 .background {
-    width: 100%;
-    height: 150vh;
-    background-attachment: fixed;
-    background: url('../../assets/pictures/slideshow/heron.jpg') no-repeat center top/cover;
+@keyframes slideshow {
+    0%{
+      background-image: url('../../assets/pictures/slideshow/heron.jpg') ;
+    }
+    6%{
+       background-image: url('../../assets/pictures/slideshow/cliff.jpg')  ;
+    } 
+    12%{
+        background-image: url('../../assets/pictures/slideshow/eagle.jpg')  ;
+    }
+    18%{
+       background-image: url('../../assets/pictures/slideshow/island.jpg') ;
+    }
+    24%{
+       background-image: url('../../assets/pictures/slideshow/mountains.jpg') ;
+    }
+    30%{
+        background-image: url('../../assets/pictures/slideshow/mushroom.jpg') ;
+     }
+    36%{
+        background-image: url('../../assets/pictures/slideshow/path.jpg') ;
+     }
+    42%{
+        background-image: url('../../assets/pictures/slideshow/people.JPG') ;
+     }
+     48%{
+        background-image: url('../../assets/pictures/slideshow/posts.JPG') ;
+     }
+     54%{
+        background-image: url('../../assets/pictures/slideshow/red.jpg') ;
+     }
+     60%{
+        background-image: url('../../assets/pictures/slideshow/rocky.JPG') ;
+     }
+     66%{
+        background-image: url('../../assets/pictures/slideshow/sand.JPG') ;
+     }
+     72%{
+        background-image: url('../../assets/pictures/slideshow/seaweed.JPG') ;
+     }
+    78%{
+        background-image: url('../../assets/pictures/slideshow/shore.JPG') ;
+     }
+     84%{
+        background-image: url('../../assets/pictures/slideshow/snail.JPG') ;
+     }
+     90%{
+        background-image: url('../../assets/pictures/slideshow/sunset.JPG') ;
+     }
+     95%{
+        background-image: url('../../assets/pictures/slideshow/heron.jpg') ;
+     }
+     100%{
+        background-image: url('../../assets/pictures/slideshow/tidepools.JPG') ;
+     }
+  } 
 
-} */
 
 .landingpage1 .container {
     width: 100%;
@@ -33,7 +86,8 @@
     margin-bottom: 10%;
     flex-direction: column;
     align-items: center;
-
+    background-color: rgb(33, 37, 41, 0.6);
+    border-radius: 25px;
 
 }
 
@@ -64,7 +118,12 @@
     align-self: center;
     margin-top: 20%;
     color: #ffffff;
+    /* background-color: rgb(33, 37, 41, 0.6);
+    border-radius: 25px; */
+    /* font-size: 300px !important; */
+    
 }
+
 
 .landingpage1 .bottom {
     justify-content: center;

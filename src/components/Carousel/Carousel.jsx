@@ -88,8 +88,8 @@ function Carousel() {
     <>
     <div name='carouselAnchor' className='carouselAnchor'></div>
     <div className='carouselTitle'>
-      <h1>Explore the RUSH maps collection</h1>
-      <h15>click on one of the prompts below</h15>
+      <h1>Explore the thematic RUSH maps</h1>
+      <h5>click on one of the prompts below to learn more</h5>
     </div><div className="Carousel">
 
         <Slider {...settings}>

@@ -28,9 +28,9 @@ const Navbar = () => {
 
                 {/*lots of code from old website to keep scrolling cpapbilities */}
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
-                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="dashpage" spy={true} smooth={true} duration={500}>Maps</Link></a></li>
-                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="eventpage" spy={true} smooth={true} duration={500}>Events</Link></a></li>
-                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="initiativepage" spy={true} smooth={true} duration={500}>Initiatives</Link></a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="dashpageAnchor" spy={true} smooth={true} duration={500}>Maps</Link></a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="eventpageAnchor" spy={true} smooth={true} duration={500}>Events</Link></a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="initiativepageAnchor" spy={true} smooth={true} duration={500}>Initiatives</Link></a></li>
                     <li><a href="/"><Link onClick={handleClose} activeClass="active" to="aboutpage" spy={true} smooth={true} duration={500}>About</Link></a></li>
 
                     <div className='mobile-menu'>

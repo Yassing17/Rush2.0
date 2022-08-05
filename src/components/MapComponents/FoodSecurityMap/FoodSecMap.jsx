@@ -11,7 +11,7 @@ function FoodSecMap() {
 
         <iframe 
         src='https://www.google.com/maps/d/embed?mid=1ZWiCRavDMbBciCnZDlhn8ceuv3NzGbw&ehbc=2E312F'
-        name="Sensitive Ecosystems"
+        name="Food Security"
         height="760vh"
         width="1090vh"
         justify-content="center"

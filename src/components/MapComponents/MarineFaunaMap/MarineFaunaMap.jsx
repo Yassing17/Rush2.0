@@ -11,7 +11,7 @@ function MarineFaunaMap() {
 
         <iframe 
         src="/mapData/marineFauna/index.html"
-        name="Sensitive Ecosystems"
+        name="marine fauna"
         height="760vh"
         width="1090vh"
         justify-content="center"
