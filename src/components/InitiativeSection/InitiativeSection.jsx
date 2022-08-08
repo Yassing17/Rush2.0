@@ -17,7 +17,7 @@ const Initiative = () => {
                 Initiatives
             </h1>
         </div> */}
-        <div>
+        <div className='hexbox'>
             <Hexagons/>
         </div>
      </div></>

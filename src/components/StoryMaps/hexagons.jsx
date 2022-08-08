@@ -1,13 +1,13 @@
-import heatMap from '../../assets/pictures/heatMap.png'
-import connectivity from '../../assets/pictures/connectivity.png'
-import bee from '../../assets/pictures/bee.jpg'
-import WSANEC from '../../assets/pictures/WSANEC.png'
-import motherTree from '../../assets/pictures/motherTree.png'
-import tinyHome from '../../assets/pictures/tinyHome.png'
-import noWaste from '../../assets/pictures/noWaste.png'
-import knowledge from '../../assets/pictures/knowledge.png'
-import planet from '../../assets/pictures/planet.png'
-import books from '../../assets/pictures/books.png'
+import heatMap from '../../assets/pictures/hexagons/heatMap.png'
+import connectivity from '../../assets/pictures/hexagons/connectivity.png'
+import bee from '../../assets/pictures/hexagons/bee.png'
+import WSANEC from '../../assets/pictures/hexagons/WSANEC.png'
+import motherTree from '../../assets/pictures/hexagons/motherTree.png'
+import tinyHome from '../../assets/pictures/hexagons/tinyHome.png'
+import noWaste from '../../assets/pictures/hexagons/noWaste.png'
+import knowledge from '../../assets/pictures/hexagons/knowledge.png'
+import planet from '../../assets/pictures/hexagons/planet.png'
+import books from '../../assets/pictures/hexagons/books.png'
 
 import { TiledHexagons } from 'tiled-hexagons'
 
@@ -74,7 +74,7 @@ const items = [
         
         <TiledHexagons
           maxHorizontal={4}
-          tileSideLengths={120}
+          tileSideLengths={160}
           tileElevations={15}
           tileGap={20}
           tileBorderRadii={9}
@@ -83,14 +83,11 @@ const items = [
             fill: '#b2f3b2',
             shadow: '#86ec86',
 
-              img: tile.image ,
+              img: tile.image,
             //   text: tile.title,
             //fix title issue after playback
               href: tile.link,
-              textStyle: {
-                fill: '#ffffff ',
-                fontSize: '30px',
-              }
+            
         
             }
           })}

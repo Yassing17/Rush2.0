@@ -39,6 +39,13 @@
     color: #ffffff;
 }
 
+.hexbox {
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .initiativepage .bottom {
     display: flex;
     justify-content: center;
