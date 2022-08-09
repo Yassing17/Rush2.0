@@ -3,13 +3,20 @@ import './AboutStyles.css'
 
 const AboutPage = () => {
   return (
-    <div name='aboutpage' className='aboutpage'>
-      <div className='sectionheader'>
-        <h1>
-          About
-        </h1>
-      </div>
+    <>
+    <div name='aboutpageAnchor' className='aboutpageAnchor'></div>
+    <div className='aboutpageTitle'>
+        <h1>About</h1>
+        <div className='text'>
+          <h5>description of about page</h5>
+        </div>
     </div>
+   
+    <div className='aboutSection'>
+      <p>stuff to fill in</p>
+    </div>
+    </>
+
   )
 }
 

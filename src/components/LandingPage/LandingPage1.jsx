@@ -29,12 +29,13 @@ const LandingPage1 = () => {
             <div className="container">
                 <div className='background'>
                     <div className="top">
-                        <h1>R U S H</h1>
+                        <h6>RUSH</h6>
 
                     </div>
                     <div className='container2'>
 
                         <h3>Accessibility - Resilience - Collaboration</h3>
+                        
                         <p>
                             The RUSH (Resilient Urban Systems and Habitats) Initiative is an open source and accessible platform that consolidates local data on community and ecosystem health and provides a space for all community-members in the Capital Regional District (CRD) to collaborate in fostering resilience within communities.
                         </p>

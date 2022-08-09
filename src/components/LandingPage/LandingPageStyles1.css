@@ -13,9 +13,9 @@
     0%{
       background-image: url('../../assets/pictures/slideshow/heron.jpg') ;
     }
-    6%{
+    /* 6%{
        background-image: url('../../assets/pictures/slideshow/cliff.jpg')  ;
-    } 
+    }  */
     12%{
         background-image: url('../../assets/pictures/slideshow/eagle.jpg')  ;
     }
@@ -46,18 +46,18 @@
      66%{
         background-image: url('../../assets/pictures/slideshow/sand.JPG') ;
      }
-     72%{
+     /* 72%{
         background-image: url('../../assets/pictures/slideshow/seaweed.JPG') ;
-     }
+     } */
     78%{
         background-image: url('../../assets/pictures/slideshow/shore.JPG') ;
      }
      84%{
         background-image: url('../../assets/pictures/slideshow/snail.JPG') ;
      }
-     90%{
+     /* 90%{
         background-image: url('../../assets/pictures/slideshow/sunset.JPG') ;
-     }
+     } */
      95%{
         background-image: url('../../assets/pictures/slideshow/heron.jpg') ;
      }
@@ -78,16 +78,22 @@
 
 .landingpage1 .container2 {
     margin: auto;
-    margin-top: 0%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
     width: 80%;
+    height: fit-content;
     max-height: fit-content;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 10%;
+    margin-bottom: 4%;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(33, 37, 41, 0.6);
-    border-radius: 25px;
+    /* background-color: rgb(101,157,189,0.8); */
+    background-color: rgb(71,72,83,0.7);
+
+
+    border-radius: 10px;
 
 }
 
@@ -113,14 +119,20 @@
 }
 
 .landingpage1 .top {
+    margin: auto;
+    padding-top: 1%;
+    width: 20%;
     justify-content: center;
     text-align: center;
     align-self: center;
-    margin-top: 20%;
+    /* text-shadow: 3px 3px #474853; */
+    margin-top: 15%;
     color: #ffffff;
-    /* background-color: rgb(33, 37, 41, 0.6);
-    border-radius: 25px; */
-    /* font-size: 300px !important; */
+
+    
+    /* background-color: rgb(71,72,83,0.8); */
+    /* border-radius: 25px; */
+   
     
 }
 
@@ -141,10 +153,14 @@
 }
 
 .custom{
-    width:120px ;
+    width:140px ;
     height:50px ;
     margin-left: 20px ;
     margin-right: 20px ;
+    font-weight:bold;
+    font-size: 300;
+    border: none;
+    font-family: 'Merriweather', serif !important;
 
 }
 
@@ -171,7 +187,7 @@
     color: #f6f6f6;
     font-size: 1rem;
     outline: none;
-    font-family: "Roboto Condensed", sans-serif;
+   
 }
 
 .contact form input:hover, textarea:hover {

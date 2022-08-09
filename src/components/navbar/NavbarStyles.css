@@ -3,7 +3,9 @@
     min-height: fit-content;
     position: fixed ;
     z-index: 5;
-    background-color: rgba(255, 255, 255, 0.526);
+    /* background-color: rgba(255, 255, 255, 0.526); */
+    background-color: rgb(71,72,83);
+
     cursor: pointer;
     justify-items: center;
     align-items: center;
@@ -13,6 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white ;
 
 }
 
@@ -20,7 +23,7 @@
     display: flex;
     align-items: center;
     margin: 1rem;
-    color: #000000;
+    color: white;
     z-index: 5;
 
 
@@ -44,14 +47,14 @@
 }
 
 .nav-menu li a {
-    color: #000000;
-    font-size: 17.5px;
+    color: white;
+    font-size: 20px;
     font-weight: 600;
     margin: 2rem;
 }
 
 .nav-menu li b {
-    color: #000000;
+    color: white;
     font-size: 12.5rem;
     font-weight: 600;
     margin: 2rem;
@@ -106,7 +109,7 @@
         border: none;
         background: rgba(255, 255, 255, .3);
         width: 100%;
-        color: #000000;
+        color: white;
     }
 
     .nav-menu button:hover {

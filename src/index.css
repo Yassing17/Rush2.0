@@ -1,18 +1,6 @@
 
-/* original */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
-/* uchen */
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Uchen&display=swap'); */
-
-/* Source Sans pro */
-/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'); */
-
-/* mukta */
-/* @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap'); */
-
-/* merriweather */
-/* @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap'); */
+ @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
 
 
 :root {
@@ -25,26 +13,8 @@
 }
 
 body {
-  /* original */
-  font-family: 'Roboto Condensed', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
 
-
-    /* uchen */
-    /* font-family: 'Uchen', serif;  */
-
-    /* source sans pro  */
-    /* font-family: 'Source Sans Pro', sans-serif; */
-
-    /* mukta */
-    /* font-family: 'Mukta', sans-serif; */
-
-    /* merriweather */
-
-    /* font-family: 'Merriweather', serif; */
-   
-
+  font-family: 'Oxygen', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -59,12 +29,17 @@ a {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 40px !important;
+}
+h6 {
+  font-size: 70px !important;
 }
 
-
-h15 {
-  font-size: 30px;
+li {
+  font-size: 19px;
+}
+b {
+  font-size: 25px;
 }
 
 h2 {
@@ -76,13 +51,14 @@ h3 {
 }
 
 p {
-  font-size:medium;
+  font-size: 19px;
 }
 
 .btn {
   margin: .5rem;
+  font-family: 'Oxygen', sans-serif !important;
   padding: .7rem 1.5rem;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 25px;
@@ -93,14 +69,21 @@ p {
 }
 
 .btn-dark {
-  background: rgba(0, 0, 0, .5);
+  background-color: rgb(71,72,83,1) !important;
+  font-family: 'Oxygen', sans-serif !important;
+
 }
 
 .btn:hover {
-  background: rgba(255, 255, 255, .4);
+
+  background: rgb(134,179,209) !important;
+
 }
 .btn-dark:hover {
-  background: rgba(0, 0, 0, .8);
+  /* background: rgba(0, 0, 0, .8); */
+
+  background: rgb(101, 157, 189) !important;
+
 }
 
 /*doesnt work (works) */

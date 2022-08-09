@@ -5,7 +5,7 @@ import '../MapObject.css'
 
 function CoastalSensMap() {
   return (
-  <div className='mapElement' id="How can I protect our coasts?">  
+  <div className='mapElement' >  
     <div className='mapContainer'>
       <div className='mapObj'>
 

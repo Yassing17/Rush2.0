@@ -1,43 +1,33 @@
+.aboutpageTitle{
+    margin: auto;
+    margin-left: 2%;
+    margin-top: 12%;
+    margin-bottom: 2%;
+    text-align: left;
+}
+.aboutpageTitle .text {
+    margin-top: 1%;
+    text-align: center;
+       
+}
+
+.aboutSection{
+    height: fit-content;
+    background-color: whitesmoke;
+    align-self: center;
+    padding: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+   
+}
 .aboutpage {
     width: 100%;
     height: 100vh;
 }
 
-.aboutpage .apcontainer {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.aboutpage .apcontainer2 {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    background-color: #000000b3;
-    padding: 1.5rem;
-    color: #f6f6f6;
-}
-
-.aboutpage .top {
-    justify-content: center;
-    margin-top: 7rem;
-    color: #ffffff;
-}
-
-.aboutpage .bottom {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 4rem;
-}
 
 @media screen and (max-width:540px) {
-    .aboutpage .container .bottom {
+    .initiativepage .container .bottom {
         flex-direction: column;
         align-items: center;
     }

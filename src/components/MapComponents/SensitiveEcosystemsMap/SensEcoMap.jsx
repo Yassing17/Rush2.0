@@ -5,7 +5,7 @@ import '../MapObject.css'
 
 function SensEcoMap() {
   return (
-  <div className='mapElement' id="Is development here a good idea?">  
+  <div className='mapElement' >  
     <div className='mapContainer'>
       <div className='mapObj'>
 

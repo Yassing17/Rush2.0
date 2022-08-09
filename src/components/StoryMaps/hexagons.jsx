@@ -66,8 +66,6 @@ const items = [
   ]
   
   
-  
-  
   function Hexagons() {
     return (
         
@@ -75,20 +73,15 @@ const items = [
         <TiledHexagons
           maxHorizontal={4}
           tileSideLengths={160}
-          tileElevations={15}
+          tileElevations={20}
           tileGap={20}
           tileBorderRadii={9}
           tiles={items.map(tile=>{
-            return{
-            fill: '#b2f3b2',
-            shadow: '#86ec86',
-
-              img: tile.image,
-            //   text: tile.title,
-            //fix title issue after playback
-              href: tile.link,
-            
-        
+            return{ 
+            fill: '#f8bd68',
+            shadow: '#f8a568',
+            img: tile.image,
+            href: tile.link,
             }
           })}
         />
@@ -98,4 +91,6 @@ const items = [
   }
   
   export default Hexagons;
+
+ 
   

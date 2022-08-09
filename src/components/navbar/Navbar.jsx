@@ -31,7 +31,7 @@ const Navbar = () => {
                     <li><a href="/"><Link onClick={handleClose} activeClass="active" to="dashpageAnchor" spy={true} smooth={true} duration={500}>Maps</Link></a></li>
                     <li><a href="/"><Link onClick={handleClose} activeClass="active" to="eventpageAnchor" spy={true} smooth={true} duration={500}>Events</Link></a></li>
                     <li><a href="/"><Link onClick={handleClose} activeClass="active" to="initiativepageAnchor" spy={true} smooth={true} duration={500}>Initiatives</Link></a></li>
-                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="aboutpage" spy={true} smooth={true} duration={500}>About</Link></a></li>
+                    <li><a href="/"><Link onClick={handleClose} activeClass="active" to="aboutpageAnchor" spy={true} smooth={true} duration={500}>About</Link></a></li>
 
                     <div className='mobile-menu'>
                         <LinkR to='/ContactPage'><button>Contact</button></LinkR>

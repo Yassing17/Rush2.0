@@ -5,7 +5,7 @@ import '../MapObject.css'
 
 function BeatTheHeat() {
   return (
-  <div className='mapElement' id="How to beat the heat?">  
+  <div className='mapElement' >  
     <div className='mapContainer'>
       <div className='mapObj'>
 
