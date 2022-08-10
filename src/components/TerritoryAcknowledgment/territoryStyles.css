@@ -1,0 +1,34 @@
+.territoryTitle{
+    margin: auto;
+    margin-left: 2%;
+    margin-top: 12%;
+    margin-bottom: 2%;
+    text-align: left;
+}
+.territoryTitle .text {
+    margin-top: 1%;
+    text-align: center;
+       
+}
+
+.territorySection{
+    height: fit-content;
+    background-color: whitesmoke;
+    align-self: center;
+    padding: 30px;
+    margin-left: 2%;
+    margin-right: 2%;
+   
+}
+.territoryPage {
+    width: 100%;
+    height: 100vh;
+}
+
+
+@media screen and (max-width:540px) {
+    .initiativepage .container .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}

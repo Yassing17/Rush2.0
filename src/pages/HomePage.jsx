@@ -10,6 +10,7 @@ import Footer from '../components/Footer/Footer'
 import Initiative from '../components/InitiativeSection/InitiativeSection'
 import Carousel from '../components/Carousel/Carousel'
 import './HomePageStyles.css'
+import Territory from '../components/TerritoryAcknowledgment/territory'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
           <Navbar/>
         </div>
         <LandingPage1 />
+        <Territory/>
         <Carousel />
         <DashboardSection></DashboardSection>
         <EventSection></EventSection>

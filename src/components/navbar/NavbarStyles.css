@@ -1,7 +1,14 @@
+.rushTitle{
+    text-decoration: none !important;
+    color: white;
+
+}
+
 .navbar {
     width: 100% ;
     min-height: fit-content;
     position: fixed ;
+    display: flex;
     z-index: 5;
     /* background-color: rgba(255, 255, 255, 0.526); */
     background-color: rgb(71,72,83);
@@ -31,7 +38,7 @@
 
 .hamburger {
     display: none;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .mobile-menu {
@@ -40,6 +47,8 @@
 
 .nav-menu {
     display: flex;
+    margin: none !important;
+    padding: none !important;
 }
 
 .nav-menu li {
