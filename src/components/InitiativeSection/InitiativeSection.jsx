@@ -7,7 +7,8 @@ import Hexagons from '../StoryMaps/hexagons'
 const Initiative = () => {
     return (
         <>
-        <div name='initiativepageAnchor' className='inititativepageAnchor'></div>
+        
+        <div name='initiativepage' className='initiativepage'>
         <div className='initiativepageTitle'>
           <h1>Inititatives</h1>
           <div className='text'>
@@ -15,11 +16,12 @@ const Initiative = () => {
           </div>
         </div>
         <div className='initiativeSection'>
-      <div name='initiativepage' className='initiativepage'>
+      
         <div className='hexbox'>
             <Hexagons/>
         </div>
       </div>
+      <div name='aboutpageAnchor' className='aboutpageAnchor'></div>
      </div></>
     )
 }

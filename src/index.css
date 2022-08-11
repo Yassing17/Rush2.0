@@ -25,6 +25,7 @@ body {
 
 ul {
   list-style-type: none ;
+  font-size: 19px;
 }
 
 a {
@@ -47,6 +48,7 @@ b {
 
 h2 {
   font-size: 40px;
+  margin: none !important
 }
 
 h3 {
@@ -90,7 +92,7 @@ p {
 }
 
 /*doesnt work (works) */
-.tb1 {
+/* .tb1 {
   margin: .5rem;
   padding: .7rem 1.5rem;
   font-size: .8rem;
@@ -98,20 +100,20 @@ p {
   background: rgba(0, 0, 0, 0.1);
   color: #000000;
   cursor: pointer;
-}
+} */
 
-.sectionheader {
+/* .sectionheader {
   width: 100%;
   color: rgb(0, 0, 0);
   margin-left: 10rem;
   margin-top: 5rem;
-}
+} */
 
 
 /*extras*/
-.placeholder1{
+/* .placeholder1{
   background:rgba(0, 0, 0, .8);
-}
+} */
 
 
 

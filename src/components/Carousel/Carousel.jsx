@@ -78,9 +78,11 @@ function Carousel() {
   return (
     <>
     <div name='carouselAnchor' className='carouselAnchor'></div>
+    <div className='carouselSection'>
     <div className='carouselTitle'>
       <h1>Explore the thematic RUSH maps</h1>
       <h5>click on one of the prompts below to learn more</h5>
+    
     </div><div className="Carousel">
 
         <Slider {...settings}>
@@ -96,8 +98,9 @@ function Carousel() {
           ))}
 
         </Slider>
-
-      </div></>
+        </div>
+        <div name='dashpageAnchor' className='dashpageAnchor'></div>
+        </div></>
     
 
   );

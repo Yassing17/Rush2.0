@@ -1,7 +1,7 @@
 .territoryTitle{
     margin: auto;
     margin-left: 2%;
-    margin-top: 12%;
+    margin-top: 2%;
     margin-bottom: 2%;
     text-align: left;
 }
@@ -15,14 +15,20 @@
     height: fit-content;
     background-color: whitesmoke;
     align-self: center;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top:5px;
+    padding-bottom: 5px;
     margin-left: 2%;
     margin-right: 2%;
+    margin-top:5%
    
 }
 .territoryPage {
     width: 100%;
-    height: 100vh;
+    background-color: #daad8645;
+    padding-top:10px;
+
 }
 
 

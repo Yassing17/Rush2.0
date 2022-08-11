@@ -1,9 +1,9 @@
 .aboutpageTitle{
-    margin: auto;
+    /* margin: auto; */
     margin-left: 2%;
-    margin-top: 12%;
-    margin-bottom: 2%;
-    text-align: left;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
 }
 .aboutpageTitle .text {
     margin-top: 1%;
@@ -22,7 +22,9 @@
 }
 .aboutpage {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    background-color: #fbeec133;
+    padding-top:2%;
 }
 
 

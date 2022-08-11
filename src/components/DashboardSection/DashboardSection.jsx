@@ -39,7 +39,7 @@ const DashboardSection = () => {
   return (
 
     <>
-    <div name='dashpageAnchor' className='dashpageAnchor'></div>
+    
     <div className='dashpageTitle'>
       <div className='word'>
       <h1>Maps</h1>
@@ -202,7 +202,9 @@ const DashboardSection = () => {
 
         </Container>
 
-      </div></>
+        <div name='eventpageAnchor' className='eventpageAnchor'></div>
+      </div>
+      </>
 
       )
       }

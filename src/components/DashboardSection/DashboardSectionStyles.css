@@ -1,9 +1,16 @@
 
 .dashpageTitle{
     margin:auto;
-    margin-left: 2.5%;
-    margin-top: 12%;    
-    text-align: left;
+
+    /* margin-top: 12%;  */
+    padding-top: 5%;   
+    text-align: center;
+    background-color: #86b3d153;
+}
+.dashpage{
+    background-color: #86b3d153;
+    padding-bottom: 5%;
+
 }
 
 .dashpageTitle .text{
@@ -19,6 +26,7 @@
     padding: 30px;
     margin-left: 2%;
     margin-right: 2%;
+
    
 }
 

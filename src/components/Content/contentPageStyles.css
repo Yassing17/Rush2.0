@@ -14,6 +14,7 @@
     width: 100%;
     background: white;
     margin-bottom: 1%;
+    border-radius: 10px;
   }
 
   .contentContainer .title {
@@ -43,6 +44,8 @@
     overflow: auto;
     height: fit-content;
     display: flex;
+    border-radius: 10px;
+
   }
   .contentContainer .storyText{
     height: fit-content;
@@ -55,6 +58,8 @@
     height: fit-content;
     width: 100%;
     background: white;
+    border-radius: 10px;
+
 
   }
   .contentContainer .tipsText{

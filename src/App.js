@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css';
 import Home from './pages/HomePage';
-import ContactPage from './pages/ContactPage';
-import Navbar from './components/Navbar/Navbar';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
-import {Link as LinkS} from 'react-router-dom'
+// import ContactPage from './pages/ContactPage';
+// import Navbar from './components/Navbar/Navbar';
+// import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+// import {Link as LinkS} from 'react-router-dom'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';

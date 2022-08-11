@@ -9,13 +9,11 @@ import AboutPage from '../components/About/About'
 import Footer from '../components/Footer/Footer'
 import Initiative from '../components/InitiativeSection/InitiativeSection'
 import Carousel from '../components/Carousel/Carousel'
-import './HomePageStyles.css'
 import Territory from '../components/TerritoryAcknowledgment/territory'
 
 const Home = () => {
   return (
     <div>
-      <div className='allBackground'>
         <div>
           <Navbar/>
         </div>
@@ -27,8 +25,7 @@ const Home = () => {
         <Initiative />
         <AboutPage />
         <Footer />
-        </div>
-    </div>
+      </div>
   )
 }
 

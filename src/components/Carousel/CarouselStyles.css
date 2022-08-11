@@ -1,6 +1,13 @@
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 
+.carouselSection{
+  background-color: #daad8645;
+  padding-top:2%;
+  padding-bottom:5%
+
+}
+
 .carouselTitle{
 
   margin: auto;
@@ -14,16 +21,23 @@
 
 }
 
+
 .Carousel {
 
-  width: 100%; 
-
-  margin: auto;
+  /* width: 100%;  */
+  justify-content: center;
+  align-items: center;
+  margin-left:2.5%;
+  margin-right: 2.5%;
   margin-top: 5%;
   margin-bottom: 5%;
   height:40vh;
   vertical-align: center;
-  background: url(../../assets/pictures/pexels-lisha-riabinina-37487.jpg);
+  /* background: url(../../assets/pictures/pexels-lisha-riabinina-37487.jpg);
+   */
+
+  background-color: whitesmoke;
+
   background-size: cover;
 
 
@@ -88,7 +102,9 @@
   /* border-color: rgb(71,72,83); */
   /* background-color: rgb(71,72,83);
    */
-   background-color: whitesmoke;
+   /* background-color: whitesmoke; */
+   background-image: url('../../assets/pictures/pexels-luis-del-río-15286.jpg');
+
 
   text-align: center;
 

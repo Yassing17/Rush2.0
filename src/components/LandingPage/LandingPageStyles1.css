@@ -2,10 +2,13 @@
     display: flex;
     width: 100%;
     height: 100vh;
- 
-    background: url('../../assets/pictures/slideshow/heron.jpg') no-repeat center top/cover;
+    background:  url('../../assets/pictures/slideshow/heron.jpg') no-repeat center top/cover;
     animation: slideshow 100s infinite 0s;
     animation-timing-function: step-start;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/pictures/slideshow/heron.jpg') no-repeat center top/cover; */
+
+
+
 
 }
 
@@ -73,6 +76,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* background-color: rgb(71,72,83,0.4); */
 
 }
 
@@ -90,7 +94,7 @@
     flex-direction: column;
     align-items: center;
     /* background-color: rgb(101,157,189,0.8); */
-    background-color: rgb(71,72,83,0.7);
+    background-color: rgb(71,72,83,0.5);
 
 
     border-radius: 10px;
@@ -157,10 +161,13 @@
     height:50px ;
     margin-left: 20px ;
     margin-right: 20px ;
+    border-radius: 51px;
     font-weight:bold;
     font-size: 300;
     border: none;
-    font-family: 'Merriweather', serif !important;
+    background-color: #8d8741 !important;
+
+
 
 }
 

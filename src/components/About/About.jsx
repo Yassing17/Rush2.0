@@ -4,7 +4,8 @@ import './AboutStyles.css'
 const AboutPage = () => {
   return (
     <>
-    <div name='aboutpageAnchor' className='aboutpageAnchor'></div>
+    {/* <div name='aboutpageAnchor' className='aboutpageAnchor'></div> */}
+    <div className='aboutpage'>
     <div className='aboutpageTitle'>
         <h1>About</h1>
         <div className='text'>
@@ -14,6 +15,7 @@ const AboutPage = () => {
    
     <div className='aboutSection'>
       <p>stuff to fill in</p>
+    </div>
     </div>
     </>
 
