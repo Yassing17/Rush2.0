@@ -162,7 +162,7 @@
     margin-left: 20px ;
     margin-right: 20px ;
     border-radius: 51px;
-    font-weight:bold;
+    /* font-weight:bold !important; */
     font-size: 300;
     border: none;
     background-color: #8d8741 !important;
