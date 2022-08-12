@@ -1,3 +1,5 @@
+//this file is in charge of organizing and displaying the raw info in content.jsx
+
 import React from 'react'
 import './contentPageStyles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,6 +8,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
  
 import Accordion from 'react-bootstrap/Accordion';
 
+//global consts are defined in content.jsx
 const ContentPage = ({
     title,
     story,

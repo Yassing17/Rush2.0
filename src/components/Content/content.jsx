@@ -1,3 +1,6 @@
+//information that accompanies each map 
+
+
 //Sensitive Ecosystems Content
 export const SEcontent = {
     title: 'Sensitive Ecosystems',
@@ -18,6 +21,7 @@ export const SEcontent = {
  };
 
 
+//how to beat the heta content
 export const BHcontent = {
     title: 'How to Beat the Heat',
     story: [

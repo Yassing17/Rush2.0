@@ -1,3 +1,5 @@
+// code for carousel
+
 import React, { useState } from 'react'
 import "./CarouselStyles.css";
 import Slider from "react-slick";
@@ -8,11 +10,8 @@ import treehouse from "../../assets/pictures/treehouseclip.png"
 import { Link } from 'react-scroll'
 
 
-
-
-
-
-
+//creating the different carousel cards
+//Title must be the same as map ID for smooth scroll to work
 const items = [
   {
       card: {
@@ -53,6 +52,7 @@ const items = [
 ];
 
 
+//creating the arrow buttons
 function Carousel() {
   const NextArrow = ({ onClick }) => {
     return (
@@ -72,6 +72,8 @@ function Carousel() {
 
   const [itemIndex, setItemIndex] = useState(0);
 
+
+//carousel settings
   const settings = {
     infinite: true,
     lazyLoad: true,
@@ -84,6 +86,8 @@ function Carousel() {
     beforeChange: (current, next) => setItemIndex(next),
   };
 
+
+//main carousel javascript code
   return (
     <>
     <div name='carouselAnchor' className='carouselAnchor'></div>

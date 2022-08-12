@@ -1,3 +1,4 @@
+//Section of website for event map and info
 import React from 'react'
 import './EventSectionStyles.css'
 import EventsMap from '../MapComponents/EventsMap/EventMap'

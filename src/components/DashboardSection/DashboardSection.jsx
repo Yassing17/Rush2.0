@@ -1,3 +1,5 @@
+//section of webiste that holds map and content combos 
+
 import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
