@@ -18,7 +18,7 @@ const Home = () => {
           <Navbar/>
         </div>
         <LandingPage1 />
-        <Territory/>
+        {/* <Territory/> */}
         <Carousel />
         <DashboardSection></DashboardSection>
         <EventSection></EventSection>

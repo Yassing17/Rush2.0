@@ -1,9 +1,9 @@
 .territoryTitle{
     margin: auto;
     margin-left: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    text-align: left;
+    /* margin-top: 2%; */
+    /* margin-bottom: 2%; */
+    text-align: center;
 }
 .territoryTitle .text {
     margin-top: 1%;
@@ -13,7 +13,7 @@
 
 .territorySection{
     height: fit-content;
-    background-color: whitesmoke;
+    background-color: rgba(245, 245, 245, 0.772);
     align-self: center;
     padding-left: 30px;
     padding-right: 30px;
@@ -21,12 +21,11 @@
     padding-bottom: 5px;
     margin-left: 2%;
     margin-right: 2%;
-    margin-top:5%
-   
+    color: rgb(69, 69, 69)
 }
+
 .territoryPage {
     width: 100%;
-    background-color: #daad8645;
     padding-top:10px;
 
 }
