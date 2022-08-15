@@ -173,18 +173,21 @@ export const FScontent = {
 export const CScontent = {
     title: 'Coastal Sensitivity',
     story: [
-        
-
+        {p: 'Over the last century, the global sea levels have increased with increasing rates. In British Columbia especially, the average sea level rose over 8 cm in most coastal areas around the province. The coast of B.C. is still rising from a geological process called post-glacial rebound—the rising of land due to past thinning and retreat of the massive ice sheet that once covered much of the province. In addition, the shifting of the tectonic plates generates vertical land motion in coastal B.C. causing parts of Vancouver Island to rise.'},
+        {p: 'Despite it being a natural phenomenon, climate change is an important factor for changes in the relative level of the oceans along the coastline. Changes in the overall volume of water in the ocean has a direct impact on sea level rise and coastal flood sensitivity. As glaciers, ice caps and ice sheets lose mass from melting, water previously stored on land as ice and snow is added to the ocean. This additional water is expected to contribute substantially to a rise in global sea level over the next century. Climate models project a further rise in global mean sea level of 26 to 98 cm by 2100. The rate and magnitude of this rise in sea level will not be uniform over the globe. It will vary from one basin to another, reflecting variations in the amount of ocean warming and the way in which ocean currents redistribute heat and mass. This map is providing important information about the coastal vulnerability in the Capital Regional District (CRD). By searching different locations, you can access the risk to your neighborhood, home or your favourite beach.'},
+        {p: 'Adaptation and mitigation to the changing conditions requires ways to inform and determine the challenges around us and the environment we all share. Stay alert and active on these issues by following some of our tips!'}
     ],
 
     tips: [
-
+        {tip: 'Reduce your  carbon footprint! Making changes in the way you consume energy in your everyday life will have an impact on limiting the amount of carbon released into the atmosphere. Using energy to light and heat your home, driving a car, and powering appliances all lead to greenhouse gas emissions, which are fueling climate change and sea level rise.'},
+        {tip: 'Be proactive! Get involved and volunteer with a conservation organization near you.Check out your about section to find out more about active organizations in the region, or our event section to find events near you and join the defense team!'},
+        {tip: 'A new study by the Stanford Woods Institute for the Environment found that our best defenses against sea level rise come from natural coastal habitats – coral reefs, mangroves, sea grasses and sand dunes shield almost two-thirds of our coastline. Helping to protect, re-plant and restore them is a large part of the solution. Check the events section to find if there are restoration initiatives in the area!'},
+        {tip: 'Support policies that support mitigation of climate change. Local governments and organizations of this issue should be held accountable and include mitigation policies.'}
     ],
   
     terms: [
-        {number: 0, name: 'Coastal Bluff', definition: ''},
-        {number: 1, name: 'Estuarine', definition: ''},
-        {number: 2, name: 'Intertidal', definition: ''},
+        {number: 0, name: 'Coastal Sensitivity Ratings', definition: 'These Ratings model the sensitivity of the British Columbia coastline to sea level rise. They were developed using an existing biogeographic land classification dataset  and previously rated sensitivity of coastal and marine feature classes, considering the effects of slope, exposure and sediment mobility'},
+        
     ]
     
  };

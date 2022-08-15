@@ -2,6 +2,7 @@ import React from 'react'
 import './AboutStyles.css'
 import teamPhoto1 from '../../assets/pictures/teamPhoto1.png'
 import teamPhoto2 from '../../assets/pictures/teamPhoto2.png'
+import { Button } from 'react-bootstrap'
 
 const AboutPage = () => {
   return (
@@ -25,6 +26,7 @@ const AboutPage = () => {
       <p>To address these issues, the RUSH team created this online platform. This website makes local climate vulnerability accessible and engaging while providing tangible solutions community members can incorporate into their everyday lives. Guided by AGILE methodologies, the team researched the problem and developed a scalable prototype. The intensive 4-month co-op term resulted in this 100% open access platform.</p>
       <p>If you would like to learn more about our RUSH team, please check out the INSPIRE UVIC website: https://www.inspireuvic.org/rush.</p>
       <p>This project is also in collaboration with The Coalition, CRD, CHN GVPN, SeaChange Marine Conservation Society, RBC Tech for Nature and interdisciplinary teams at UVIC.</p>
+      <a href='https://drive.google.com/drive/folders/1H5gMy4Km14mp5F3zTzL10UK5SBwXKEHL' ><button className="btn btn-dark custom" >See References</button></a>
     </div>
     </div>
     </>

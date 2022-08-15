@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './InitiativeSectionStyles.css'
-import { Link } from 'react-scroll'
-import Hexagons from '../StoryMaps/hexagons'
+import Hexagons from './hexagons'
 
 
 const Initiative = () => {

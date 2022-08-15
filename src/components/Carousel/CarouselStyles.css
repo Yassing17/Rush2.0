@@ -5,23 +5,19 @@
   background-color: #daad8645;
   padding-top:2%;
   padding-bottom:5%
-
 }
 
 .carouselTitle{
-
   margin: auto;
   margin-top: 10%;
   width:80%;
   text-align: center;
   justify-content: center;
   align-items: center;
-
 }
 
 
 .Carousel {
-
   /* width: 100%;  */
   justify-content: center;
   align-items: center;
@@ -32,12 +28,7 @@
   height:40vh;
   vertical-align: center;
   background: url(../../assets/pictures/fern.png);
-  /* background-color: whitesmoke; */
   background-size: cover;
-
-
-
-  
 }
 
 
@@ -62,13 +53,10 @@
 }
 
 .arrow {
-
   background-color: transparent;
-
   position: absolute;
   cursor: pointer;
   z-index: 10;
-
 }
 
 .arrow svg {
@@ -91,20 +79,14 @@
 }
 
 .CarouselSlideItem {
-  margin-top: 25%;
-  /* outline: solid; */
   border-radius: 10px;
-  /* border-color: rgb(71,72,83); */
-  /* background-color: rgb(71,72,83);
-   */
-
-   background-color: #8d8741;
-
-   /* background-image: url('../../assets/pictures/pexels-luis-del-río-15286.jpg'); */
+  padding-top:20%;
+  justify-content: center;
+  align-items: center;
+  background-color: #8d8741;
   text-align: center;
   color: black;
-  padding-top:5%;
-  height:25vh;
+  height:40vh;
 }
 
 .CarouselSlideItem:hover{

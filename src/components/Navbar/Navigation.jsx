@@ -23,7 +23,7 @@ const Navigation = () => {
         <div className='navigation'>
             <div className="containerYG">
                 <div className={slide ? 'logo slide-right' : 'logo'}>
-                    <h2><Link className='rushTitle' onClick={handleClose} activeClass="active" to="landingpage1" spy={true} smooth={true} duration={500}>R U S H</Link></h2>
+                    <h2><Link style={{color: 'white'}} className='rushTitle' onClick={handleClose} activeClass="active" to="landingpage1" spy={true} smooth={true} duration={500}>R U S H</Link></h2>
                 </div>
 
 
@@ -34,7 +34,7 @@ const Navigation = () => {
                     <li><Link onClick={handleClose} activeClass="active" to="aboutpageAnchor" spy={true} smooth={true} duration={500}>About</Link></li>
 
                     <div className='mobile-menu'>
-                        <LinkR style={{textDecoration: 'none'}} to='/ContactPage'>Contact</LinkR>
+                        <LinkR  style={{textDecoration: 'none', color: 'white !important' }} to='/ContactPage'>Contact</LinkR>
                         <div className="social-icons">
                             <FaFacebook className='icon' />
                             <FaInstagram className='icon' />
@@ -45,7 +45,7 @@ const Navigation = () => {
                 </ul>
 
                 <ul>
-                    <li><LinkR style={{textDecoration: 'none'}} to='/ContactPage'>Contact</LinkR></li>
+                    <li><LinkR className='contactLink' style={{textDecoration: 'none'}} to='/ContactPage'>Contact</LinkR></li>
                 </ul>
 
                

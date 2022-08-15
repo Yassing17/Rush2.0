@@ -3,7 +3,9 @@
     height: auto;
     position: fixed;
     z-index: 5;
-    background-color: rgba(255, 255, 255, 0.682);
+    /* background-color: rgba(255, 255, 255, 0.682); */
+    background-color: #8d8741 !important;
+    
     cursor: pointer;
 }
 
@@ -14,10 +16,9 @@
     vertical-align: middle !important;
     padding-left: 1%;
     padding-right: 1%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-
 }
+
+
 
 .navigation .logo {
     display: flex;
@@ -27,6 +28,7 @@
 
 
 }
+
 
 .hamburger {
     display: none;
@@ -43,6 +45,11 @@
 
 .nav-menu li {
     padding: 2rem;
+    color: white;
+}
+
+.nav-menu li:hover{
+  color: rgb(134,179,209);
 }
 
 .nav-menu li a {
@@ -98,6 +105,7 @@
     .nav-menu li:hover {
         border-bottom: 1px solid rgb(19, 19, 19);
         width: 175px;
+
     }
 
     .nav-menu button {
@@ -143,6 +151,21 @@
     .navigation .slide-right {
         margin-left: 30%;
     }
+}
+
+.rushTitle:hover{
+  color: rgb(134,179,209) !important;
+
+}
+
+.contactLink{
+   color: white !important; 
+   padding-right:50%;
+}
+
+.contactLink:hover{
+  color: rgb(134,179,209) !important;
+
 }
 
 /*placeholder css for navigation*/

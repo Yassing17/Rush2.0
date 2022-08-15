@@ -93,7 +93,7 @@ function Carousel() {
             <div className={idx === itemIndex ? "slide activeSlide" : "slide"}>
               <Link to={item.card.title}>
               <div className='CarouselSlideItem'>
-                  <h2>{item.card.title}</h2>
+                  <h2 >{item.card.title}</h2>
                   {/* <img src={item.card.image} alt={item.card.title} height='100px' width='400px' /> */}
               </div>
               </Link>

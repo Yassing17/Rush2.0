@@ -5,11 +5,11 @@
     -ms-flex-align: center;
     justify-content: center;
     padding: 15px;
-    border-radius: 10px;
+    /* border-radius: 10px;
     border-color: #474853;
 
     border-style: solid;
-    border-width: 6px;
+    border-width: 6px; */
     z-index: 1;
     margin: auto;
     /* margin-left: 5%; */

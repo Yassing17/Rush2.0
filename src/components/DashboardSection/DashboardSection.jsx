@@ -78,6 +78,7 @@ const DashboardSection = () => {
             </div>
           </div>
 
+    
 
           {/* Beat the Heat  */}
         <div className='mapbreaker' id='How to beat the heat?'/>
