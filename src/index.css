@@ -64,37 +64,27 @@ p {
 .btn {
   margin: .5rem;
   font-family: 'Josefin Sans', sans-serif !important;
-
   padding: .7rem 1.5rem;
   font-size: 1.3rem;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 25px;
   border: none;
-  background: rgba(255, 255, 255, .1);
-  
   color: #f6f6f6;
   cursor: pointer;
 }
 
 .btn-dark {
   background-color: #8d8741;
-
   font-family: 'Josefin Sans', sans-serif !important;
   font-weight: bold !important;
-
 }
 
 .btn:hover {
-
   background: rgb(134,179,209) !important;
-
 }
 .btn-dark:hover {
-  /* background: rgba(0, 0, 0, .8); */
-
   background: rgb(101, 157, 189) !important;
-
 }
 
 /*doesnt work (works) */

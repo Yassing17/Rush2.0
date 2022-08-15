@@ -3,6 +3,7 @@ import "./CarouselStyles.css";
 import Slider from "react-slick";
 import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 import { Link } from 'react-scroll'
+import Heat from '../../assets/pictures/flowerPattern.png'
 
 
 
@@ -14,11 +15,13 @@ const items = [
   {
       card: {
           title: 'How to beat the heat?',
+          image: Heat
       },
   },
   {
       card: {
           title: "How can I eat local?",
+          
      },
   },
   {
@@ -80,7 +83,7 @@ function Carousel() {
     <div name='carouselAnchor' className='carouselAnchor'></div>
     <div className='carouselSection'>
     <div className='carouselTitle'>
-      <h1>Explore the thematic RUSH maps</h1>
+      <h1>Explore the interactive RUSH maps</h1>
       <h5>click on one of the prompts below to learn more</h5>
     
     </div><div className="Carousel">

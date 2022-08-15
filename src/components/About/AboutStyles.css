@@ -28,6 +28,14 @@
     padding-top:2%;
     padding-bottom:5%;
 }
+.photoContainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top:0.5%;
+    padding-bottom: 0.5%;
+
+}
 
 
 @media screen and (max-width:540px) {

@@ -31,11 +31,8 @@
   margin-bottom: 5%;
   height:40vh;
   vertical-align: center;
-  /* background: url(../../assets/pictures/pexels-lisha-riabinina-37487.jpg);
-   */
-
-  background-color: whitesmoke;
-
+  background: url(../../assets/pictures/fern.png);
+  /* background-color: whitesmoke; */
   background-size: cover;
 
 
@@ -100,20 +97,14 @@
   /* border-color: rgb(71,72,83); */
   /* background-color: rgb(71,72,83);
    */
-   /* background-color: whitesmoke; */
-   background-image: url('../../assets/pictures/pexels-luis-del-río-15286.jpg');
 
+   background-color: #8d8741;
 
+   /* background-image: url('../../assets/pictures/pexels-luis-del-río-15286.jpg'); */
   text-align: center;
-
   color: black;
-  padding-top:15%;
-  
-  height:20vh;
-  
-  
-
-
+  padding-top:5%;
+  height:25vh;
 }
 
 .CarouselSlideItem:hover{
@@ -122,5 +113,4 @@
 
 .title {
   font-size: 50px;
-
 }
