@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { FaBars, FaFacebook, FaTimes, FaInstagram } from 'react-icons/fa'
 import { GiCarWheel } from 'react-icons/gi'
-import './NavbarStyles.css'
+import './NavigationStyles.css'
 import { Link } from 'react-scroll'
 import { Link as LinkR } from 'react-router-dom'
 
 
-const Navbar = () => {
+const Navigation = () => {
     const [nav, setNav] = useState(false)
     const [slide, setSlide] = useState(false)
 
@@ -20,13 +20,13 @@ const Navbar = () => {
     }
 
     return (
-        <div className='navbar'>
+        <div className='navigation'>
             <div className="containerYG">
                 <div className={slide ? 'logo slide-right' : 'logo'}>
                     <h2><Link className='rushTitle' onClick={handleClose} activeClass="active" to="landingpage1" spy={true} smooth={true} duration={500}>R U S H</Link></h2>
                 </div>
 
-                {/*lots of code from old website to keep scrolling cpapbilities */}
+
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
                     <li><Link onClick={handleClose} activeClass="active" to="dashpageAnchor" spy={true} smooth={true} duration={500}>Maps</Link></li>
                     <li><Link onClick={handleClose} activeClass="active" to="eventpageAnchor" spy={true} smooth={true} duration={500}>Events</Link></li>
@@ -48,6 +48,7 @@ const Navbar = () => {
                     <li><LinkR style={{textDecoration: 'none'}} to='/ContactPage'>Contact</LinkR></li>
                 </ul>
 
+               
                 <div className="hamburger" onClick={handleNav} >
                     {nav ? (<FaTimes size={20} style={{ color: '#000000' }} />) : (<FaBars style={{ color: '#000000' }} size={20} />)}
                 </div>
@@ -57,4 +58,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navigation

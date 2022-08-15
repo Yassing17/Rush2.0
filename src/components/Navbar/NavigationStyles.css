@@ -1,41 +1,28 @@
-.rushTitle{
-    text-decoration: none !important;
-    color: white;
-
-}
-
-
-.navbar {
-    width: 100% ;
-    min-height: fit-content;
-    position: fixed ;
-    display: flex;
+.navigation {
+    width: 100%;
+    height: auto;
+    position: fixed;
     z-index: 5;
-    /* background-color: rgba(255, 255, 255, 0.526); */
-    /* background-color: rgb(71,72,83); */
-    
-    background-color: #8d8741;
-
+    background-color: rgba(255, 255, 255, 0.682);
     cursor: pointer;
-    justify-items: center;
-    align-items: center;
 }
 
-.navbar .containerYG {
-    height: fit-content;
+.navigation .containerYG {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white ;
+    vertical-align: middle !important;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 
 }
 
-.navbar .logo {
+.navigation .logo {
     display: flex;
     align-items: center;
-    margin: 1rem;
-
-    color: white;
+    color: #000000;
     z-index: 5;
 
 
@@ -43,8 +30,7 @@
 
 .hamburger {
     display: none;
-
-    /* padding: 1rem; */
+    padding: 1rem;
 }
 
 .mobile-menu {
@@ -53,28 +39,22 @@
 
 .nav-menu {
     display: flex;
-    margin: none !important;
-    padding: none !important;
 }
 
 .nav-menu li {
-    padding: 1rem;
+    padding: 2rem;
 }
 
-.nav-menu li:hover {
-    color: #86b3d1;
-
-}
 .nav-menu li a {
-    color: white;
-    font-size: 20px;
+    color: #000000;
+    font-size: 1.75rem;
     font-weight: 600;
     margin: 2rem;
 }
 
 .nav-menu li b {
-    color: white;
-    font-size: 12.5rem;
+    color: #000000;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 2rem;
 }
@@ -113,7 +93,6 @@
 
     .nav-menu li a {
         font-size: 1.2rem;
-
     }
 
     .nav-menu li:hover {
@@ -129,7 +108,7 @@
         border: none;
         background: rgba(255, 255, 255, .3);
         width: 100%;
-        color: white;
+        color: #000000;
     }
 
     .nav-menu button:hover {
@@ -151,7 +130,7 @@
         display: none;
     }
 
-   .navbar .slide-right {
+   .navigation .slide-right {
         margin-left: 45%;
         transition: .8s ease-in-out;
     }
@@ -161,14 +140,14 @@
         width: 75%;
     }
 
-    .navbar .slide-right {
+    .navigation .slide-right {
         margin-left: 30%;
     }
 }
 
-/*placeholder css for navbar*/
+/*placeholder css for navigation*/
 /*
-.navbar {
+.navigation {
     background-color: black;
 }
 */

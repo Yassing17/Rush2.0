@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
 import Contact from '../components/Contact/Contact'
+import Navigation from '../components/Navbar/Navigation'
 
 
 
@@ -10,7 +10,7 @@ const ContactPage = () => {
     <div>
         {/* <div>Heading Test</div> */}
         <div>
-          <Navbar/>
+          <Navigation/>
         </div>
         <Contact />
     </div>
