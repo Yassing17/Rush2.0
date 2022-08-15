@@ -1,14 +1,10 @@
 .landingpage1 {
     display: flex;
     width: 100%;
-    height: 100vh;
-    background:  url('../../assets/pictures/slideshow/heron.jpg') no-repeat center top/cover;
+    height: 172vh;
+    background:  url('../../assets/pictures/slideshow/heron.jpg')  no-repeat center top/cover;
     animation: slideshow 100s infinite 0s;
     animation-timing-function: step-start;
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/pictures/slideshow/heron.jpg') no-repeat center top/cover; */
-
-
-
 
 }
 
@@ -16,9 +12,9 @@
     0%{
       background-image: url('../../assets/pictures/slideshow/heron.jpg') ;
     }
-    /* 6%{
+    6%{
        background-image: url('../../assets/pictures/slideshow/cliff.jpg')  ;
-    }  */
+    } 
     12%{
         background-image: url('../../assets/pictures/slideshow/eagle.jpg')  ;
     }
@@ -70,15 +66,19 @@
   } 
 
 
-.landingpage1 .container {
+.landingpage1 .container1 {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* background-color: rgb(71,72,83,0.4); */
-
+    justify-content: space-between; 
+    background-color: rgba(4, 4, 4, 0.349);
+    z-index: 3;
+   
 }
+
+
+
 
 .landingpage1 .container2 {
     margin: auto;
@@ -94,9 +94,6 @@
     flex-direction: column;
     align-items: center;
     /* background-color: rgb(101,157,189,0.8); */
-    background-color: rgb(71,72,83,0.5);
-
-
     border-radius: 10px;
 
 }
@@ -112,15 +109,7 @@
   margin-right: 10%;
 }
 
-.landingpage1 .tb1 {
-    flex-direction: column;
-    width: 35%;
-    height: 60rem;
-    margin-left: 7rem;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    color: #000000;
-}
+
 
 .landingpage1 .top {
     margin: auto;
@@ -129,15 +118,8 @@
     justify-content: center;
     text-align: center;
     align-self: center;
-    /* text-shadow: 3px 3px #474853; */
     margin-top: 15%;
-    color: #ffffff;
-
-    
-    /* background-color: rgb(71,72,83,0.8); */
-    /* border-radius: 25px; */
-   
-    
+    color: #ffffff;    
 }
 
 
@@ -162,42 +144,8 @@
     margin-left: 20px ;
     margin-right: 20px ;
     border-radius: 51px;
-    font-weight:bold;
     font-size: 300;
     border: none;
     background-color: #8d8741 !important;
-
-
-
 }
 
-
-/*
-.contact form div {
-    display: flex;
-    flex-direction: column;
-    margin: .5rem;
-}
-
-.contact form label {
-    margin: 1rem 0 .2rem .7rem;
-    color: #eee;
-}
-
-
-.landingpage1, textarea {
-    margin: .5rem;
-    padding: .7rem 1.5rem;
-    background: rgba(255, 255, 255, .3);
-    border: none;
-    border-radius: 25px;
-    color: #f6f6f6;
-    font-size: 1rem;
-    outline: none;
-   
-}
-
-.contact form input:hover, textarea:hover {
-    box-shadow: 0 0 4px 0;
-}
-*/

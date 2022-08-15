@@ -6,6 +6,10 @@
 
     margin-bottom: 5%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:0.5%;
+    
 }
 
 .eventSection{
@@ -19,13 +23,16 @@
     /* border-radius: 10px; */
 }
 .eventpageTitle .text{
-    margin-top: 1%;
+    width:80%;
+    margin: auto;
     text-align: center;
-    }
+}
+
 .eventpage {
     width: 100%;
     background-color: #cb61153b;
     padding-bottom: 5%;
+    
 
 
 

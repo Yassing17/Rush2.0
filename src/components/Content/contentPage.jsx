@@ -28,13 +28,16 @@ const ContentPage = ({
                 {
                     terms.map((term)=> {
                       return (
+                        
                         <Accordion.Item eventKey={term.number} >
-                        <Accordion.Header>{term.name}</Accordion.Header>
+                        <Accordion.Header>
+                          <p>{term.name}</p>
+                          </Accordion.Header>
                         <Accordion.Body>
                           {term.definition}
                         </Accordion.Body>
                       </Accordion.Item>
-        
+                   
                       )
                     })
                 }

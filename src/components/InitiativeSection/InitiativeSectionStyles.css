@@ -5,11 +5,16 @@
     margin-bottom: 2%;
     text-align: center;
     margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:0.5%;
+
 
 }
 .initiativepageTitle .text {
-    margin-top: 1%;
     text-align: center;
+    margin: auto;
+    width: 80%;
        
 }
 
