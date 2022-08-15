@@ -3,7 +3,7 @@ import "./CarouselStyles.css";
 import Slider from "react-slick";
 import { TiChevronLeft, TiChevronRight } from "react-icons/ti";
 import { Link } from 'react-scroll'
-import Heat from '../../assets/pictures/flowerPattern.png'
+
 
 
 
@@ -15,7 +15,7 @@ const items = [
   {
       card: {
           title: 'How to beat the heat?',
-          image: Heat
+          
       },
   },
   {

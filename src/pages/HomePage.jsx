@@ -2,7 +2,7 @@ import React from 'react'
 
 import DashboardSection from '../components/DashboardSection/DashboardSection'
 import EventSection from '../components/EventSection/EventSection'
-import Navbar from '../components/Navbar/Navbar'
+import Navigation from '../components/Navbar/Navigation'
 import Contact from '../components/Contact/Contact'
 import LandingPage1 from '../components/LandingPage/LandingPage1'
 import AboutPage from '../components/About/About'
@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div>
         <div>
-          <Navbar/>
+          <Navigation/>
         </div>
         <LandingPage1 />
         {/* <Territory/> */}
