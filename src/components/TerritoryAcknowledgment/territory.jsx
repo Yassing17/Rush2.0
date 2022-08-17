@@ -12,8 +12,8 @@ const Territory = () => {
                     <p>If you are interested in learning more about the traditional names of these lands, there are some incredible resources availble: </p>
                     <ol style={{textAlign: 'left'}}>
                       <li style={{fontSize:18}}>The BC Assembly of First Nations (BCAFN) has an interactive map showing the nations in BC. </li>
-                      <li style={{fontSize:18}}>Learn about native plants in your ecosystem and how to spot them. Check out this link which can teach you about native plants on Vancouver Island using the English, Latin and SENĆOŦEN languages</li>
-                      <li style={{fontSize:18}}>Dr. Margaret Pearce, an award-winning cartographer, created a map with Indigenous place names all over Canada called “Coming Home.” You can access the map or purchase a copy here.</li>
+                      <li style={{fontSize:18}}>Learn about native plants in your ecosystem and how to spot them. Check out the Camosun College Native Plants website which can teach you about native plants on Vancouver Island using the English, Latin and SENĆOŦEN languages</li>
+                      <li style={{fontSize:18}}>Dr. Margaret Pearce, an award-winning cartographer, created a map with Indigenous place names all over Canada called “Coming Home”.</li>
                     </ol>
                 </div>
             </div>

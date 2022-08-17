@@ -2,6 +2,9 @@ import React from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+
+import Carousel from '../Carousel/Carousel'
+
 import BeatTheHeat from '../MapComponents/BeatTheHeatMap/BeatHeatMap'
 import FoodSecMap from '../MapComponents/FoodSecurityMap/FoodSecMap'
 import MarineFaunaMap from '../MapComponents/MarineFaunaMap/MarineFaunaMap'
@@ -38,8 +41,7 @@ import "./DashboardSectionStyles.css";
 const DashboardSection = () => {
   return (
 
-    <>
-    
+    <>    
     <div className='dashpageTitle'>
       <div className='word'>
       <h1>Maps</h1>
@@ -47,14 +49,13 @@ const DashboardSection = () => {
       <h5>Click on and off the maps to interact or exit.</h5>
       <h7>Search for your address, explore different data layers, zoom in and out, and click on features to learn more.</h7>
       </div>
+      <Carousel/>
     </div>
     </div>
       <div name='dashpage' className='dashpage'>
 
         <Container fluid>
 
-
-        
         {/* Sensitive Ecosytems  */}
         <div className='mapbreaker' id='Is development here a good idea?'/>
         <div className='mapSection'>
@@ -154,7 +155,7 @@ const DashboardSection = () => {
 
 
           {/* Marine Flora   */}
-        <div className='mapbreaker' id='Plants?'/>
+        <div className='mapbreaker' id='What grows here?'/>
           <div className='mapSection'>
             <div className='word'>
               <h1>Marine Flora</h1>

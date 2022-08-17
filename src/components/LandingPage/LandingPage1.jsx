@@ -43,14 +43,21 @@ const LandingPage1 = () => {
                         </p>
                     </div>
                     <div className="bottom">
-                        <Link onClick={handleClose} activeClass="active" to="carouselAnchor" spy={true} smooth={true} duration={500}><button className="btn btn-dark custom">Learn</button></Link>
+                        <Link onClick={handleClose} activeClass="active" to="dashpageAnchor" spy={true} smooth={true} duration={500}><button className="btn btn-dark custom">Learn</button></Link>
                         <Link onClick={handleClose} activeClass="active" to="eventpageAnchor" spy={true} smooth={true} duration={500}><button className="btn btn-dark custom ">Act</button></Link>
                     </div>
                     <Territory/>
+                    <div name='dashpageAnchor' className='dashpageAnchor'></div>
+
                 </div>
             </div>
 
+
+
         </div>
+
+
+        
     )
 }
 

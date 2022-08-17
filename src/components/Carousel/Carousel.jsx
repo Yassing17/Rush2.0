@@ -36,7 +36,7 @@ const items = [
   },
   {
     card: {
-      title: 'Plants?',
+      title: 'What grows here?',
     },
   },
   {
@@ -80,13 +80,7 @@ function Carousel() {
 
   return (
     <>
-    <div name='carouselAnchor' className='carouselAnchor'></div>
-    <div className='carouselSection'>
-    <div className='carouselTitle'>
-      <h1>Explore the interactive RUSH maps</h1>
-      <h5>click on one of the prompts below to learn more</h5>
-    
-    </div><div className="Carousel">
+    <div className="Carousel">
 
         <Slider {...settings}>
           {items.map((item, idx) => (
@@ -94,7 +88,6 @@ function Carousel() {
               <Link to={item.card.title}>
               <div className='CarouselSlideItem'>
                   <h2 >{item.card.title}</h2>
-                  {/* <img src={item.card.image} alt={item.card.title} height='100px' width='400px' /> */}
               </div>
               </Link>
             </div>
@@ -102,8 +95,11 @@ function Carousel() {
 
         </Slider>
         </div>
-        <div name='dashpageAnchor' className='dashpageAnchor'></div>
-        </div></>
+        <div className='carouselTitle'>
+        <h5>click on one of the prompts below to learn more</h5>
+    
+        </div>
+        </>
     
 
   );

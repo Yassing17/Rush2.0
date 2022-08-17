@@ -1,6 +1,7 @@
 
 .dashpageTitle{
     margin:auto;
+    padding-bottom:3%;
     /* margin-top: 12%;  */
     padding-top: 5%;   
     text-align: center;
@@ -33,7 +34,7 @@
 }
 
 .mapbreaker{
-    height: 80px;
+    height: 110px;
     /* width: 100%; */
 }
 
