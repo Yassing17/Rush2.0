@@ -34,7 +34,7 @@ const Navigation = () => {
                     <li><Link onClick={handleClose} activeClass="active" to="aboutpageAnchor" spy={true} smooth={true} duration={500}>About</Link></li>
 
                     <div className='mobile-menu'>
-                        <LinkR  style={{textDecoration: 'none', color: 'white !important' }} to='/ContactPage'>Contact</LinkR>
+                        <a  style={{textDecoration: 'none', color: 'white !important' }} href="https://forms.gle/A8REiE7bwBRzmqkB8">Contact</a>
                         <div className="social-icons">
                             <FaFacebook className='icon' />
                             <FaInstagram className='icon' />
@@ -45,7 +45,7 @@ const Navigation = () => {
                 </ul>
 
                 <ul>
-                    <li><LinkR className='contactLink' style={{textDecoration: 'none'}} to='/ContactPage'>Contact</LinkR></li>
+                    <li><a className='contactLink' style={{textDecoration: 'none'}} href='https://forms.gle/A8REiE7bwBRzmqkB8'>Contact</a></li>
                 </ul>
 
                
