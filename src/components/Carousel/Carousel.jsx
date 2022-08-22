@@ -96,7 +96,7 @@ function Carousel() {
         </Slider>
         </div>
         <div className='carouselTitle'>
-        <h5>click on one of the prompts below to learn more</h5>
+        <h5>click on one of the prompts above to learn more</h5>
     
         </div>
         </>
